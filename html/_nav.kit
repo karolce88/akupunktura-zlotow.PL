@@ -1,24 +1,41 @@
 <nav class="nav">
     <div class="nav__media-bar">
-        <div class="wrapper">
-            <p>umów wizytę: +48 512 466 493</p>
+        <div class="nav__media-bar-conitainer">
+            <a href="tel:+48512466493" class="nav__link-phone">
+            <p class="nav__media-bar-text"><img class="nav__phone-icon" src="dist/img/icon/phone.png" alt="Ikona telefonu">+48 512 466 493</p>
+            </a>
+            <p class="nav__media-bar-text nav__media-text-space"><img class="nav__clock-icon" src="dist/img/icon/clock.png" alt="Ikona zegara">Zadzwoń i umów się na pasujący Ci termin</p>
+            <a href="https://www.facebook.com/akupunkturamm/?locale=pl_PL" target="_blank" rel=”noopener”>
+            <img class="nav__media-bar-media-icon nav__fb-space" src="dist/img/icon/fb.png" alt="Facebook">
+            </a>
+            <a href="https://www.instagram.com/akupunktura.marciniak/" target="_blank" rel=”noopener”>
+            <img class="nav__media-bar-media-icon" src="dist/img/icon/ig.png" alt="Instagram">
+            </a>
         </div>
     </div>
     <div class="wrapper">
-            <img class="nav__logo" src="dist/img/Medycyna-chinska-logo.png" alt="">
+            <img class="nav__logo" src="dist/img/Medycyna-chinska-logo.png" alt="Logo Akupunktura Złotów">
             <div class="nav__menu-container">
-                <nav class="nav__desktop-nav">
+                <div class="nav__desktop-nav">
                     <ul>
-                        <a href="#aboutme"><li class="nav__nav-item">O mnie</li></a> 
-                        <a href="#offer"><li class="nav__nav-item">Oferta</li></a>
+                        <a href="#aboutme"><li class="nav__nav-item">O mnie</li></a>
+                        <a href="#offer" class="offer-desktop-item"><li class="nav__nav-item offer-color">Oferta <img class="nav__arrow-icon" src='dist/img/icon/arrow-icon-bottom.png' alt=""></li></a>
+                        <div class="nav__dropdown-menu-offer disactive desktop-offer-menu">
+                            <ul class="nav__dropdown-menu-ul">
+                                <li class="nav__dropdown-menu-li">akupunktura</li>
+                                <li class="nav__dropdown-menu-li">dietetyka</li>
+                                <li class="nav__dropdown-menu-li">zioła</li>
+                                <li class="nav__dropdown-menu-li">medycyna chińska</li>
+                                <li class="nav__dropdown-menu-li">szkolenia</li>
+                            </ul>
+                        </div>
                         <a href="#prices"> <li class="nav__nav-item">Cennik</li></a>
                         <a href="#opinion"><li class="nav__nav-item">Opinie</li></a>
                         <a href="#faq"><li class="nav__nav-item">FAQ</li></a>
                         <a href="#contact"><li class="nav__nav-item">Kontakt</li></a>
                     </ul>
-                </nav>
+                </div>
                 <button class="nav__burger-btn"></button>
             </div>
         </div>
-    
 </nav>
