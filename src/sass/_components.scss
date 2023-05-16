@@ -1,9 +1,18 @@
-@keyframes arrowIconMenuOffertifier {
+@keyframes arrowIconMenuOffertItem {
     from{
         transform: rotateX(0deg);
     }
     to {
         transform: rotateX(180deg);
+    }
+}
+
+@keyframes arrowIconMenuOffertItemRev {
+    from{
+        transform: rotateX(180deg);
+    }
+    to {
+        transform: rotateX(0deg);
     }
 }
 

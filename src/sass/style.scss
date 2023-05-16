@@ -8,6 +8,7 @@
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+	// overflow: hidden;
 }
 
 body {
@@ -23,6 +24,8 @@ body {
 	width: 100%;
 }
 
+// NAV:
+
 .nav-bottom-shadow {
 	box-shadow: 0 2px 5px -2px $black-text;
 }
@@ -36,22 +39,26 @@ body {
 }
 
 .rotate {
-	animation: arrowIconMenuOffertifier 1s ease forwards;
+	animation: arrowIconMenuOffertItem 1s ease forwards;
+}
+
+.rotate-rev {
+	animation: arrowIconMenuOffertItemRev 1s ease forwards;
 }
 
 .resize-desktop-logo {
-	animation: resizeDesktopLogo 1s linear forwards;
+	animation: resizeDesktopLogo 0.8s linear forwards;
 }
 
 .resize-desktop-logo-rev {
-	animation: resizeDesktopLogoRev 1s linear forwards;
+	animation: resizeDesktopLogoRev 0.8s linear forwards;
 }
 
 .nav {
 	position: fixed;
 	width: 100%;
 	top: 0px;
-	z-index: 100;
+	z-index: 10;
 	background-color: $bg-white;
 
 	.wrapper {
@@ -65,24 +72,146 @@ body {
 		display: none;
 	}
 
-	&__burger-btn {
-		margin-right: 25px;
-		height: 40px;
-		width: 40px;
-	}
-
 	&__media-bar {
 		display: none;
 	}
 
-	&__logo-bg{
-		padding-left: 10px;
-		margin: 4px;
+	&__logo-bg {
+		margin: 4px 4px 4px 10px;
 		width: 228px;
 		height: 62px;
 		background-image: url('../../dist/img/Medycyna-chinska-logo-mobile.png');
 		background-position: contain;
 		background-repeat: no-repeat;
+	}
+
+	&__burger-btn {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-right: 20px;
+		height: 40px;
+		width: 40px;
+		border: none;
+		cursor: pointer;
+		z-index: 12;
+		background-color: $bg-white;
+		overflow: hidden;
+
+		&:focus {
+			outline: none;
+			color: transparent;
+		}
+	}
+
+	.burger-btn-border {
+		border: 2px solid $black-text;
+		border-radius: 4px;
+	}
+
+	&__burger-btn-container {
+		position: relative;
+		border-radius: 4px;
+		height: 100%;
+		width: 100%;
+	}
+
+	&__burger-btn-items {
+		position: absolute;
+		width: 90%;
+		height: 10%;
+		background-color: $black-text;
+		border-radius: 2px;
+		top: 50%;
+		left: 50%;
+		transition: all .7s;
+	}
+
+	&__burger-btn-span1 {
+		transform: translate(-50%, -350%);
+	}
+
+	&__burger-btn-span2 {
+		transform: translate(-50%, -50%);
+	}
+
+	&__burger-btn-span3 {
+		transform: translate(-50%, 250%);
+	}
+
+	.burger-span1 {
+		transform: translate(-50%, -50%) rotate(45deg);
+	}
+	
+	.burger-span2 {
+		transform: translate(-260%, -50%);
+		opacity: .4;
+	}
+	
+	.burger-span3 {
+		transform: translate(-50%, -50%) rotate(-45deg);
+	}
+
+	&__mobile-menu-container {
+		position: absolute;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		height: 100vh;
+		top: 0px;
+		left: -100%;
+		background-color: $bg-white;
+		padding-top: 45px;
+		z-index: -1;
+		transition: all .4s;
+	}
+
+	.mobile-menu-active {
+		left: 0%;
+	}
+
+	&__mobile-menu-items {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	
+	&__mobile-menu-items-content {
+		position: relative;
+		display: inline-block;
+		text-decoration: none;
+		padding: 20px 30px;
+		margin: 6px;
+		font-size: 18px;
+		text-transform: uppercase;
+		transition: .3s;
+		overflow: hidden;
+		color: $black-text;
+
+		&:hover {
+			color: $main-pink;
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			width: 60%;
+			height: 4px;
+			background-color: $main-pink;
+			bottom: 0px;
+			left: -65%;
+			transition: all .2s;
+			border-radius: 3px;
+		}
+
+		&:hover::before {
+			left: 0px;
+		}
+
+		&__mobile-menu-link {
+			text-decoration: none;
+		}
 	}
 }
 
@@ -99,7 +228,15 @@ body {
 		content: '';
 		width: 100%;
 		height: 100%;
-		background-color: #a4f77d29;
+		background-color: #a4f77d1c;
+	}
+	
+	&::after {
+		position: absolute;
+		content: '';
+		width: 100%;
+		height: 100%;
+		background-color: #4848485a;
 	}
 }
 
