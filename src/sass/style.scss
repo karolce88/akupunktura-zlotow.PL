@@ -36,8 +36,15 @@ body {
 }
 
 .rotate {
-	transform: rotateX(180deg);
-	transition: all .4s;
+	animation: arrowIconMenuOffertifier 1s ease forwards;
+}
+
+.resize-desktop-logo {
+	animation: resizeDesktopLogo 1s linear forwards;
+}
+
+.resize-desktop-logo-rev {
+	animation: resizeDesktopLogoRev 1s linear forwards;
 }
 
 .nav {
@@ -58,11 +65,6 @@ body {
 		display: none;
 	}
 
-	&__logo {
-		padding-left: 25px;
-		margin: 4px;
-	}
-
 	&__burger-btn {
 		margin-right: 25px;
 		height: 40px;
@@ -71,6 +73,16 @@ body {
 
 	&__media-bar {
 		display: none;
+	}
+
+	&__logo-bg{
+		padding-left: 10px;
+		margin: 4px;
+		width: 228px;
+		height: 62px;
+		background-image: url('../../dist/img/Medycyna-chinska-logo-mobile.png');
+		background-position: contain;
+		background-repeat: no-repeat;
 	}
 }
 
@@ -92,7 +104,7 @@ body {
 }
 
 .main {
-	height: 600px;
+	height: 2000px;
 }
 
 @import './small';

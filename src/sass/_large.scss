@@ -38,7 +38,7 @@
 				height: 4px;
 				background-color: $main-pink;
 				bottom: 0px;
-				left: -100%;
+				left: -65%;
                 transition: all .4s;
                 border-radius: 3px;
 			}
@@ -101,7 +101,7 @@
         &__link-phone {
             text-decoration: none;
             color: $main-pink;
-            transition: .2s;
+            transition: .3s;
             margin-right: 25px;
 
             &:hover {
@@ -112,7 +112,7 @@
         &__link-email {
             text-decoration: none;
             color: $main-pink;
-            transition: .2s;
+            transition: .3s;
 
             &:hover {
                 color: $black-text;
@@ -166,7 +166,7 @@
 				height: 4px;
 				background-color: $main-pink;
 				bottom: 0px;
-				left: -100%;
+				left: -40%;
                 transition: all .4s;
                 border-radius: 3px;
 			}
