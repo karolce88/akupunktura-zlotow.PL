@@ -11,6 +11,16 @@ const spanBTN1 = document.querySelector('.nav__burger-btn-span1')
 const spanBTN2 = document.querySelector('.nav__burger-btn-span2')
 const spanBTN3 = document.querySelector('.nav__burger-btn-span3')
 const mobileMenu = document.querySelector('.nav__mobile-menu-container')
+const logo = document.querySelector('.nav__logo-bg')
+const showMobileMenuByOfferClick = document.querySelector('.mobile-menu-offer-item')
+const showedMobileMenuByOfferClick = document.querySelector('.nav__mobile-menu-container-offer-submenu')
+const submenuULitems1 = document.querySelector('.submenu-LI-link1')
+const submenuULitems2 = document.querySelector('.submenu-LI-link2')
+const submenuULitems3 = document.querySelector('.submenu-LI-link3')
+const submenuULitems4 = document.querySelector('.submenu-LI-link4')
+const submenuULitems5 = document.querySelector('.submenu-LI-link5')
+const submenuBackBtn = document.querySelector('.nav__mobile-menu-items-back-btn')
+
 
 //dropdown menu for "offer" item (desktop):
 const showDekstopOfferMenu = () => {
@@ -61,9 +71,53 @@ function addShadow() {
 	}
 }
 
-// burger btn
+const closeMobileMenu = () => {
+    mobileMenu.classList.remove('mobile-menu-active')
+    burgerBTN.classList.remove('burger-btn-border')
+    spanBTN1.classList.remove('burger-span1')
+    spanBTN2.classList.remove('burger-span2')
+    spanBTN3.classList.remove('burger-span3')
+    showedMobileMenuByOfferClick.classList.remove('mobile-menu-active')
+}
+
+const closeMobileMenuByClickElements = () => {
+    const mobileMenuLinks1 = document.querySelector('.mobile-nav-links1')
+    const mobileMenuLinks2 = document.querySelector('.mobile-nav-links2')
+    const mobileMenuLinks3 = document.querySelector('.mobile-nav-links3')
+    const mobileMenuLinks4 = document.querySelector('.mobile-nav-links4')
+    const mobileMenuLinks5 = document.querySelector('.mobile-nav-links5')
+    mobileMenuLinks1.addEventListener('click', showMobileMenu)
+    mobileMenuLinks2.addEventListener('click', showMobileMenu)
+    mobileMenuLinks3.addEventListener('click', showMobileMenu)
+    mobileMenuLinks4.addEventListener('click', showMobileMenu)
+    mobileMenuLinks5.addEventListener('click', showMobileMenu)
+}
+
+const closeSubmenuOffer = () => {
+    showedMobileMenuByOfferClick.classList.remove('mobile-menu-active')
+}
+
+const showOfferSubmenu = () => {
+    if (!showedMobileMenuByOfferClick.classList.contains('mobile-menu-active')) {
+        showedMobileMenuByOfferClick.classList.add('mobile-menu-active')
+        submenuULitems1.addEventListener('click', showMobileMenu)
+        submenuULitems2.addEventListener('click', showMobileMenu)
+        submenuULitems3.addEventListener('click', showMobileMenu)
+        submenuULitems4.addEventListener('click', showMobileMenu)
+        submenuULitems5.addEventListener('click', showMobileMenu)
+        submenuBackBtn.addEventListener('click', closeSubmenuOffer)
+    } else if ( showedMobileMenuByOfferClick.classList.contains('mobile-menu-active')) {
+        showedMobileMenuByOfferClick.classList.remove('mobile-menu-active')
+    }
+
+   
+}
+
 const showMobileMenu = () => {
 	if (!mobileMenu.classList.contains('mobile-menu-active')) {
+        closeMobileMenuByClickElements()
+		logo.addEventListener('click', closeMobileMenu)
+        showMobileMenuByOfferClick.addEventListener('click', showOfferSubmenu)
 		mobileMenu.classList.add('mobile-menu-active')
 		burgerBTN.classList.add('burger-btn-border')
 		spanBTN1.classList.add('burger-span1')
@@ -75,6 +129,7 @@ const showMobileMenu = () => {
 		spanBTN1.classList.remove('burger-span1')
 		spanBTN2.classList.remove('burger-span2')
 		spanBTN3.classList.remove('burger-span3')
+        showedMobileMenuByOfferClick.classList.remove('mobile-menu-active')
 	}
 }
 
