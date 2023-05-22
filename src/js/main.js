@@ -20,6 +20,7 @@ const submenuULitems3 = document.querySelector('.submenu-LI-link3')
 const submenuULitems4 = document.querySelector('.submenu-LI-link4')
 const submenuULitems5 = document.querySelector('.submenu-LI-link5')
 const submenuBackBtn = document.querySelector('.nav__mobile-menu-items-back-btn')
+const mediaBar = document.querySelector('.nav__media-bar')
 
 
 //dropdown menu for "offer" item (desktop):
@@ -60,14 +61,18 @@ const changeMediaIconsIGLeave = () => {
 
 // nav shadow
 function addShadow() {
-	if (window.scrollY >= 1) {
-		nav.classList.add('nav-bottom-shadow')
-		logoDesktop.classList.remove('resize-desktop-logo-rev')
-		logoDesktop.classList.add('resize-desktop-logo')
-	} else {
+	if (window.scrollY < 1) {
 		nav.classList.remove('nav-bottom-shadow')
 		logoDesktop.classList.remove('resize-desktop-logo')
 		logoDesktop.classList.add('resize-desktop-logo-rev')
+	} else {
+		nav.classList.add('nav-bottom-shadow')
+		logoDesktop.classList.remove('resize-desktop-logo-rev')
+		logoDesktop.classList.add('resize-desktop-logo')
+	}
+
+	if (window.scrollY < 1) {
+		mediaBar.classList('remove-media-bar')
 	}
 }
 
@@ -143,7 +148,7 @@ mediaBarFB.addEventListener('mouseover', changeMediaIconsFB)
 mediaBarIG.addEventListener('mouseover', changeMediaIconsIG)
 mediaBarFB.addEventListener('mouseleave', changeMediaIconsFBLeave)
 mediaBarIG.addEventListener('mouseleave', changeMediaIconsIGLeave)
-// nav shadow:
+// nav shadow & media bar:
 window.addEventListener('scroll', addShadow)
 // burger btn:
 burgerBTN.addEventListener('click', showMobileMenu)

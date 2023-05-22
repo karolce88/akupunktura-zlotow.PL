@@ -1,38 +1,66 @@
 @keyframes arrowIconMenuOffertItem {
-    from{
-        transform: rotateX(0deg);
-    }
-    to {
-        transform: rotateX(180deg);
-    }
+	from {
+		transform: rotateX(0deg);
+	}
+	to {
+		transform: rotateX(180deg);
+	}
 }
 
 @keyframes arrowIconMenuOffertItemRev {
-    from{
-        transform: rotateX(180deg);
-    }
-    to {
-        transform: rotateX(0deg);
-    }
+	from {
+		transform: rotateX(180deg);
+	}
+	to {
+		transform: rotateX(0deg);
+	}
 }
 
-@keyframes resizeDesktopLogo {
-    from{
-        height: 62px;
-    }
-    to {
-        height: 45px;
-        background-image: url('../../dist/img/Medycyna-chinska-logo-small.png');
-    }
+// @keyframes resizeDesktopLogo {
+// 	from {
+// 		width: 228px;
+// 		height: 62px;
+// 	}
+// 	to {
+// 		width: 165px;
+// 		height: 45px;
+// 		background-image: url('../../dist/img/Medycyna-chinska-logo-small.png');
+// 	}
+// }
+
+// @keyframes resizeDesktopLogoRev {
+// 	from {
+// 		width: 165px;
+// 		height: 45px;
+// 		background-image: url('../../dist/img/Medycyna-chinska-logo-small.png');
+// 	}
+// 	to {
+// 		width: 228px;
+// 		height: 62px;
+// 		background-image: url('../../dist/img/Medycyna-chinska-logo-mobile.png');
+// 	}
+// }
+
+
+@keyframes resizeDesktopLogoo {
+	from {
+		width: 228px;
+		height: 62px;
+	}
+	to {
+		width: 165px;
+		height: 45px;
+
+	}
 }
 
-@keyframes resizeDesktopLogoRev {
-    from{
-        height: 45px;
-        background-image: url('../../dist/img/Medycyna-chinska-logo-small.png');
-    }
-    to {
-        height: 62px;
-        background-image: url('../../dist/img/Medycyna-chinska-logo-mobile.png');
-    }
+@keyframes resizeDesktopLogoRevv {
+	from {
+		width: 165px;
+		height: 45px;
+	}
+	to {
+		width: 228px;
+		height: 62px;
+	}
 }

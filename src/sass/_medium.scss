@@ -1,3 +1,20 @@
 @media(min-width: 768px) {
     
+    .header {
+        &__h1-head {
+            font-size: 34px;
+            color: $h1-heading;
+            width: min-content;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            line-height: 34px;
+            font-family: fira sans-bold;
+            z-index: 10;
+        }
+        &__paragraph {
+            padding-top: 20px;
+            font-size: 26px;
+            color: $h1-heading;
+        }
+    }
 }
