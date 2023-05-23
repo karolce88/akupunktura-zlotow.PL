@@ -70,10 +70,15 @@ function addShadow() {
 		logoDesktop.classList.remove('resize-desktop-logo-rev')
 		logoDesktop.classList.add('resize-desktop-logo')
 	}
-
-	if (window.scrollY < 1) {
-		mediaBar.classList('remove-media-bar')
+	
+	if (window.scrollY > 500) {
+		mediaBar.classList.remove('remove-media-bar-rev')
+		mediaBar.classList.add('remove-media-bar')
+	} else {
+		mediaBar.classList.remove('remove-media-bar')
+		mediaBar.classList.add('remove-media-bar-rev')
 	}
+
 }
 
 const closeMobileMenu = () => {

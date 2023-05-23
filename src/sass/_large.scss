@@ -61,6 +61,14 @@
             color: $main-pink;
         }
 
+        .remove-media-bar {
+            animation: mediaBarAnim 1s ease forwards;
+        }
+
+        .remove-media-bar-rev {
+            animation: mediaBarAnimRev 1s ease forwards;
+        }
+
         &__media-bar-conitainer {
             display: flex;
             justify-content: space-between;
