@@ -10,6 +10,10 @@
 	padding: 0;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	font-family: 'fira sans', sans-serif;
 	background-color: $bg-white;
@@ -314,17 +318,18 @@ body {
 	background-size: cover;
 	background-repeat: no-repeat;
 	height: 600px;
-	overflow: hidden;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	overflow: hidden;
+
 
 	&::before {
 		position: absolute;
 		content: '';
 		width: 100%;
 		height: 100%;
-		background-color: #80808050;
+		background-color: #00000041;
 	}
 
 	&::after {
@@ -332,7 +337,7 @@ body {
 		content: '';
 		width: 100%;
 		height: 100%;
-		background-color: #0000000f;
+		background-color: #44444426;
 	}
 
 	&__box {
@@ -347,7 +352,6 @@ body {
 
 	&__h1-head {
 		font-size: 30px;
-		color: $h1-heading;
 		width: min-content;
 		letter-spacing: 2px;
 		text-transform: uppercase;
@@ -355,16 +359,15 @@ body {
 		font-family: 'fira sans-bold';
 		font-weight: 700;
 		z-index: 10;
+		color: $h1-heading;
 	}
 
 	&__paragraph {
 		padding-top: 15px;
 		font-size: 22px;
-		color: $h1-heading;
 		text-transform: uppercase;
-		font-family: 'fira sans-bold';
-		font-weight: 700;
 		letter-spacing: 1px;
+		color: $h1-heading;
 	}
 
 	&__button{
@@ -373,16 +376,15 @@ body {
 		height: 44px;
 		border: none;
 		background-color: $CTA-green;
-		border-radius: 3px;
-		color: $black-text;
-		cursor: pointer;
+		border-radius: 4px;
+		color: $bg-white;
 		font-family: 'fira sans-bold';
-		font-weight: 700;
 		font-size: 14px;
 		letter-spacing: 0.5px;
 		display: flex;
 		justify-content: flex-start;
 		align-items: center;
+		text-decoration: none;
 
 		&:hover .header__vertical-bar {
 			margin-right: 20px;
@@ -407,6 +409,56 @@ body {
 
 .main {
 	height: 2000px;
+
+	.rings {
+
+		&__container{
+			position: absolute;
+			top: 540px;
+			left: 0;
+			width: 100%;
+			height: 80px;
+		}
+	
+		&__circle{
+			position: absolute;
+			height: 80px;
+			width: 80px;
+			border-radius: 50%;
+			left: 50%;
+			border: 2px solid $bg-white;
+		}
+
+		&__circle-one {
+			transform: translate(70%, 0%);
+			background-image: url(../../dist/img/rectangle1-small.jpg);
+			background-position: 50% 50%;
+		}
+		&__circle-two {
+			transform: translate(-50%, 0%);
+			background-image: url(../../dist/img/rectangle2-small.jpg);
+			background-position: 35% 45%;
+		}
+		&__circle-three {
+			transform: translate(-170%, 0%);			
+			background-image: url(../../dist/img/rectangle3-small.jpg);
+			background-position: 50% 50%;
+		}
+	}
+
+	.aboutme {
+		position: relative;
+		scroll-margin-top: 0px;
+		
+		.h2-section {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, 350%);
+			text-transform: uppercase;
+			font-size: 26px;
+		}
+	}
 }
 
 @import './small';
