@@ -528,7 +528,7 @@ body {
 
 		&__quote-icon {
 			position: absolute;
-			top: -8px;
+			top: -6px;
 			left: 10px;
 		}
 
@@ -552,7 +552,12 @@ body {
 		&__education {
 			width: 100%;
 			height: 500px;
-			background-color: $little-white-section;
+			background-color: $bg-white;
+			padding: 35px 15px;
+		}
+
+		&__education-list {
+			padding: 25px;
 		}
 	}
 }
