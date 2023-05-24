@@ -21,8 +21,16 @@ body {
 	font-size: 16px;
 }
 
-.wrapper {
+.wrapper-nav {
 	margin: 0 auto;
+	max-width: 1360px;
+	width: 100%;
+}
+
+.wrapper {
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 	max-width: 1360px;
 	width: 100%;
 }
@@ -68,7 +76,7 @@ body {
 	align-items: center;
 	flex-direction: column;
 
-	.wrapper {
+	.wrapper-nav {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -408,7 +416,7 @@ body {
 }
 
 .main {
-	height: 2000px;
+	font-size: 15px;
 
 	.rings {
 
@@ -417,13 +425,13 @@ body {
 			top: 540px;
 			left: 0;
 			width: 100%;
-			height: 80px;
+			height:160px;
 		}
 	
 		&__circle{
 			position: absolute;
-			height: 80px;
-			width: 80px;
+			height: 160px;
+			width: 160px;
 			border-radius: 50%;
 			left: 50%;
 			border: 2px solid $bg-white;
@@ -433,30 +441,110 @@ body {
 			transform: translate(70%, 0%);
 			background-image: url(../../dist/img/rectangle1-small.jpg);
 			background-position: 50% 50%;
+			display: none;
 		}
 		&__circle-two {
 			transform: translate(-50%, 0%);
 			background-image: url(../../dist/img/rectangle2-small.jpg);
-			background-position: 35% 45%;
+			background-position: 80% 45%;
 		}
 		&__circle-three {
 			transform: translate(-170%, 0%);			
 			background-image: url(../../dist/img/rectangle3-small.jpg);
 			background-position: 50% 50%;
+			display: none;
+		}
+	}
+
+	.h2-title-sections {
+		position: relative;
+		text-transform: uppercase;
+		font-size: 26px;
+
+		&::before {
+			content: '';
+			position: absolute;
+			width: 30px;
+			height: 4px;
+			border-radius: 4px;
+			bottom: -16px;
+			left: 0px;
+			background: $main-pink;
 		}
 	}
 
 	.aboutme {
-		position: relative;
-		scroll-margin-top: 0px;
+		scroll-margin-top: -70px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+
+		&__title-center {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-bottom: 50px;
+		}
+
+
+		&__box1 {
+			position: relative;
+			top: 150px;
+		}
+
+		&__text {
+			line-height: 24px;
+			margin: 0 8px;
+			z-index: 1;
+		}
 		
-		.h2-section {
+		&__box-sentence {
+			position: relative;
+			width: 100%;
+			height: 700px;
+			background-image: url(../../dist/img/aboutme-bg1-small.jpg);
+			background-repeat: no-repeat;
+			background-position: 0% 80%;
+			@include flex-center;
+			z-index: -1;
+		}
+		
+		&__text-sentence {
+			margin: 0 20px;
+			padding: 8px;
+			background-color: $bg-white;
+			border-radius: 8px;
+			font-family: 'fira sans-italic';
+			font-weight: italic;
+			color: $black-text;
+			line-height: 22px;
+			letter-spacing: 1px;
+			font-size: 16px;
+			border: 1px solid $little-gray;
+		}
+
+		&__box-sentence-inside {
+			display: flex;
+			flex-direction: column;
+		}
+
+		&__my-img-small {
 			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, 350%);
-			text-transform: uppercase;
-			font-size: 26px;
+			max-width: 100%;
+			height: auto;
+			right: 50px;
+			bottom: -55px;
+		}
+
+		&__my-img-big {
+			display: none;
+		}
+
+		&__education {
+			width: 100%;
+			height: 500px;
+			background-color: $little-white-section;
 		}
 	}
 }

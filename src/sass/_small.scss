@@ -1,46 +1,40 @@
 @media (min-width: 576px) {
+	.main {
+		.rings {
+			&__container {
+				position: absolute;
+				top: 540px;
+				left: 0;
+				width: 100%;
+				height: 140px;
+			}
 
-    .main {
-    
-        .rings {
-    
-            &__container {
-                position: absolute;
-                top: 540px;
-                left: 0;
-                width: 100%;
-                height: 120px;
-            }
-        
-            &__circle{
-                height: 120px;
-                width: 120px;
-            }
-    
-            &__circle-one {
-                transform: translate(90%, 0%);
-            }
-            &__circle-two {
-                transform: translate(-50%, 0%);
-            }
-            &__circle-three {
-                transform: translate(-190%, 0%);			
-            }
-        }
+			&__circle {
+				height: 140px;
+				width: 140px;
+			}
 
+			&__circle-one {
+				transform: translate(90%, 0%);
+				display: flex;
+			}
+			&__circle-two {
+				transform: translate(-50%, 0%);
+                background-position: 70% 45%;
+			}
+			&__circle-three {
+				transform: translate(-190%, 0%);
+				display: flex;
+			}
+		}
 
-        .aboutme{
-            position: relative;
-            scroll-margin-top: -45px;
-            
-            .h2-section {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, 550%);
-                text-transform: uppercase;
+		.aboutme {
+			position: relative;
+			scroll-margin-top: -60px;
+
+			&__box1 {
+                top: 130px;
             }
-        }
-    }
-
+		}
+	}
 }
