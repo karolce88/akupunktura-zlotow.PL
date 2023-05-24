@@ -511,6 +511,7 @@ body {
 		}
 		
 		&__text-sentence {
+			position: relative;
 			margin: 0 20px;
 			padding: 8px;
 			background-color: $bg-white;
@@ -522,6 +523,12 @@ body {
 			letter-spacing: 1px;
 			font-size: 16px;
 			border: 1px solid $little-gray;
+		}
+
+		&__quote-icon {
+			position: absolute;
+			top: -8px;
+			left: 10px;
 		}
 
 		&__box-sentence-inside {
