@@ -513,7 +513,7 @@ body {
 		&__text-sentence {
 			position: relative;
 			margin: 0 20px;
-			padding: 8px;
+			padding: 12px;
 			background-color: $bg-white;
 			border-radius: 8px;
 			font-family: 'fira sans-italic';
@@ -540,8 +540,8 @@ body {
 			position: absolute;
 			max-width: 100%;
 			height: auto;
-			right: 50px;
-			bottom: -55px;
+			right: 35px;
+			bottom: -85px;
 		}
 
 		&__my-img-big {
