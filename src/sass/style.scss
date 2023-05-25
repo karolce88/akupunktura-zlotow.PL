@@ -369,12 +369,14 @@ body {
 		color: $h1-heading;
 	}
 
-	&__paragraph {
-		padding-top: 15px;
-		font-size: 22px;
+	&__h1-span {
+		font-family: 'fira sans';
+		padding-top: 18px;
+		font-size: 18px;
 		text-transform: uppercase;
-		letter-spacing: 1px;
+		letter-spacing: 0px;
 		color: $h1-heading;
+		font-weight: 400;
 	}
 
 	&__button {
@@ -477,6 +479,7 @@ body {
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
+		height: auto;
 
 		&__title-center {
 			display: flex;
@@ -491,9 +494,14 @@ body {
 		}
 
 		&__text {
-			line-height: 24px;
-			margin: 0 8px;
+			margin: 0 14px; // margin text - mobile
 			z-index: 1;
+			padding-bottom: 25px;
+			line-height: 28px;
+		}
+
+		&__span-bold {
+			font-weight: 700;
 		}
 
 		&__box-sentence {
@@ -516,10 +524,12 @@ body {
 			font-family: 'fira sans-italic';
 			font-weight: italic;
 			color: $black-text;
-			line-height: 22px;
+			line-height: 26px;
 			letter-spacing: 1px;
 			font-size: 16px;
 			border: 1px solid $little-gray;
+			background: rgb(246,246,246);
+			background: linear-gradient(139deg, rgba(246,246,246,0.87718837535014) 0%, rgba(208,208,208,0.9220063025210083) 50%, rgba(246,246,246,1) 100%);
 		}
 
 		&__quote-icon-big {
@@ -549,7 +559,7 @@ body {
 			display: none;
 		}
 
-		&__education {
+		&__education-container {
 			width: 100%;
 			height: 500px;
 			background-color: $bg-white;
@@ -557,9 +567,93 @@ body {
 		}
 
 		&__education-list {
-			padding: 25px;
+			padding: 10px 35px;
+			border: 1px solid $little-gray;
+			border-width: 0px 1px 1px 1px;
+			border-radius: 4px;
+			display: none;
+			height: 0%;
+			opacity: 0;
+			transition: all .3s;
+		}
+		
+		.education-list-one, .education-list-two {
+			display: block;
+			height: 100%;
+			opacity: 1;
+		}
+
+		.close-education-list {
+			display: none;
+			height: 0%;
+			opacity: 0;
+		}
+
+		.show-education-list {
+			display: block;
+			height: 100%;
+			opacity: 1;
+		}
+
+		.rotate-aboutme-education-icon {
+			transform: rotate(180deg);
+		}
+
+		&__box-education {
+			width: 100%;
+		}
+
+		&__education-list-items {
+			margin: 5px 0px;
+			font-size: 14px;
+			padding-left: 3px;
+			line-height: 20px;
+		}
+
+		&__h3-education {
+			border: 1px solid $little-gray;
+			border-radius: 4px;
+			padding: 16px 15px;
+			font-size: 15px;
+			background: rgb(208, 208, 208);
+			background: linear-gradient(
+				0deg,
+				rgba(208, 208, 208, 1) 5%,
+				rgba(255, 255, 255, 1) 52%,
+				rgba(246, 246, 246, 1) 95%
+			);
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			cursor: pointer;
+		}
+
+		&__h3-education-svg-icon {
+			margin-left: 8px;
+			transition: all 0.3s;
+			pointer-events: none;
+		}
+
+
+		&__box-education {
+			padding-top: 30px;
+		}
+
+		&__span-italic {
+			font-family: 'fira sans-italic';
+		}
+
+		&__span-italic-bold {
+			font-family: 'fira sans-italic';
+			font-weight: 700;
+		}
+
+		&__span-bold {
+			font-weight: 700;
 		}
 	}
+
+
 }
 
 @import './small';
