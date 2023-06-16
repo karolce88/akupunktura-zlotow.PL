@@ -22,18 +22,10 @@ const submenuULitems5 = document.querySelector('.submenu-LI-link5')
 const submenuBackBtn = document.querySelector('.nav__mobile-menu-items-back-btn')
 const mediaBar = document.querySelector('.nav__media-bar')
 
-const H3aboutmeOne = document.querySelector('.h3-education-one')
-const H3aboutmeTwo = document.querySelector('.h3-education-two')
-const H3aboutmeThree = document.querySelector('.h3-education-three')
-const H3aboutmeFour = document.querySelector('.h3-education-four')
-const H3aboutmeTextOne = document.querySelector('.education-list-one')
-const H3aboutmeTextTwo = document.querySelector('.education-list-two')
-const H3aboutmeTextThree = document.querySelector('.education-list-three')
-const H3aboutmeTextFour = document.querySelector('.education-list-four')
-const aboutmeIcon1 = document.querySelector('.aboutme__h3-education-svg-icon-one')
-const aboutmeIcon2 = document.querySelector('.aboutme__h3-education-svg-icon-two')
-const aboutmeIcon3 = document.querySelector('.aboutme__h3-education-svg-icon-three')
-const aboutmeIcon4 = document.querySelector('.aboutme__h3-education-svg-icon-four')
+
+
+
+
 
 
 //dropdown menu for "offer" item (desktop):
@@ -161,29 +153,40 @@ offerBtnDesktop.addEventListener('mouseover', showDekstopOfferMenu)
 dropdownDesktopItem.addEventListener('mouseover', showDekstopOfferMenu)
 offerBtnDesktop.addEventListener('mouseleave', hideDekstopOfferMenu)
 dropdownDesktopItem.addEventListener('mouseleave', hideDekstopOfferMenu)
+
 // media bar icon - changing to color:
 mediaBarFB.addEventListener('mouseover', changeMediaIconsFB)
 mediaBarIG.addEventListener('mouseover', changeMediaIconsIG)
 mediaBarFB.addEventListener('mouseleave', changeMediaIconsFBLeave)
 mediaBarIG.addEventListener('mouseleave', changeMediaIconsIGLeave)
+
 // nav shadow & media bar:
 window.addEventListener('scroll', addShadow)
+
 // burger btn:
 burgerBTN.addEventListener('click', showMobileMenu)
-// aboutme:
-H3aboutmeOne.addEventListener('click', function () {
-	H3aboutmeTextOne.classList.toggle('close-education-list')
-	aboutmeIcon1.classList.toggle('rotate-aboutme-education-icon')
-})
-H3aboutmeTwo.addEventListener('click', function () {
-	H3aboutmeTextTwo.classList.toggle('close-education-list')
-	aboutmeIcon2.classList.toggle('rotate-aboutme-education-icon')
-})
-H3aboutmeThree.addEventListener('click', function () {
-	H3aboutmeTextThree.classList.toggle('show-education-list')
-	aboutmeIcon3.classList.toggle('rotate-aboutme-education-icon')
-})
-H3aboutmeFour.addEventListener('click', function () {
-	H3aboutmeTextFour.classList.toggle('show-education-list')
-	aboutmeIcon4.classList.toggle('rotate-aboutme-education-icon')
-})
+
+// aboutme / education:
+
+const accordionAll = document.querySelectorAll('.aboutme__accordion')
+
+
+
+const showAndHideFAQeducation = (e) => {
+
+	console.log(e.target.nextElementSibling);
+
+	if (!e.target.nextElementSibling.classList.contains('show-panel')) {
+		e.target.querySelector('.aboutme__h3-education-svg-icon').classList.remove('rotate-rev-icon-aboutme')
+		e.target.nextElementSibling.classList.remove('hide-panel')
+		e.target.nextElementSibling.classList.add('show-panel')
+		e.target.querySelector('.aboutme__h3-education-svg-icon').classList.add('rotate-icon-aboutme')
+	} else if (e.target.nextElementSibling.classList.contains('show-panel')) {
+		e.target.nextElementSibling.classList.remove('show-panel')
+		e.target.nextElementSibling.classList.add('hide-panel')
+		e.target.querySelector('.aboutme__h3-education-svg-icon').classList.remove('rotate-icon-aboutme')
+		e.target.querySelector('.aboutme__h3-education-svg-icon').classList.add('rotate-rev-icon-aboutme')
+	}
+}
+
+accordionAll.forEach(clic => clic.addEventListener('click', showAndHideFAQeducation))

@@ -479,7 +479,7 @@ body {
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
-		height: auto;
+		// height: auto;
 
 		&__title-center {
 			display: flex;
@@ -528,8 +528,13 @@ body {
 			letter-spacing: 1px;
 			font-size: 16px;
 			border: 1px solid $little-gray;
-			background: rgb(246,246,246);
-			background: linear-gradient(139deg, rgba(246,246,246,0.87718837535014) 0%, rgba(208,208,208,0.9220063025210083) 50%, rgba(246,246,246,1) 100%);
+			background: rgb(246, 246, 246);
+			background: linear-gradient(
+				139deg,
+				rgba(246, 246, 246, 0.87718837535014) 0%,
+				rgba(208, 208, 208, 0.9220063025210083) 50%,
+				rgba(246, 246, 246, 1) 100%
+			);
 		}
 
 		&__quote-icon-big {
@@ -566,55 +571,18 @@ body {
 			padding: 35px 15px;
 		}
 
-		&__education-list {
-			padding: 10px 35px;
-			border: 1px solid $little-gray;
-			border-width: 0px 1px 1px 1px;
-			border-radius: 4px;
-			display: none;
-			height: 0%;
-			opacity: 0;
-			transition: all .3s;
-		}
-		
-		.education-list-one, .education-list-two {
-			display: block;
-			height: 100%;
-			opacity: 1;
-		}
+		/* nowe faq */
 
-		.close-education-list {
-			display: none;
-			height: 0%;
-			opacity: 0;
-		}
-
-		.show-education-list {
-			display: block;
-			height: 100%;
-			opacity: 1;
-		}
-
-		.rotate-aboutme-education-icon {
-			transform: rotate(180deg);
-		}
-
-		&__box-education {
+		&__accordion {
 			width: 100%;
-		}
-
-		&__education-list-items {
-			margin: 5px 0px;
-			font-size: 14px;
-			padding-left: 3px;
-			line-height: 20px;
-		}
-
-		&__h3-education {
+			padding: 0 5px;
 			border: 1px solid $little-gray;
 			border-radius: 4px;
-			padding: 16px 15px;
-			font-size: 15px;
+			cursor: pointer;
+			display: flex;
+			align-items: center;
+			display: flex;
+			justify-content: space-between;
 			background: rgb(208, 208, 208);
 			background: linear-gradient(
 				0deg,
@@ -622,21 +590,37 @@ body {
 				rgba(255, 255, 255, 1) 52%,
 				rgba(246, 246, 246, 1) 95%
 			);
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			cursor: pointer;
+		}
+
+		&__type-education {
+			padding: 12px;
+			border-radius: 4px;
+			padding: 15px 15px;
+			font-size: 15px;
+		}
+
+		&__panel {
+			padding: 0 15px;
+			overflow: hidden;
+			transition: all 0.5s ease-in;
+			border: 1px solid $little-gray;
+			border-radius: 4px;
+			opacity: 0;
+			height: 0px;
+			transition: all 0.3s;
+			margin-bottom: 15px;
 		}
 
 		&__h3-education-svg-icon {
-			margin-left: 8px;
+			margin: 0 10px;
 			transition: all 0.3s;
 			pointer-events: none;
 		}
 
-
-		&__box-education {
-			padding-top: 30px;
+		&__list-content {
+			margin: 10px 0px;
+			font-size: 14px;
+			line-height: 20px;
 		}
 
 		&__span-italic {
@@ -651,9 +635,27 @@ body {
 		&__span-bold {
 			font-weight: 700;
 		}
+
+		.show-panel {
+			// opacity: 1;
+			// height: auto;
+			animation: showEducationList .9s ease-in forwards;
+		}
+
+		.hide-panel {
+			// opacity: 1;
+			// height: auto;
+			animation: closeEducationList .9s ease-in forwards;
+		}
+
+		.rotate-icon-aboutme {
+			animation: arrowIconMenuOffertItem 1s ease forwards;
+		}
+
+		.rotate-rev-icon-aboutme {
+			animation: arrowIconMenuOffertItemRev 1s ease forwards;
+		}
 	}
-
-
 }
 
 @import './small';
