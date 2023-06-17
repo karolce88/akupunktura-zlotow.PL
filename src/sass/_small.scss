@@ -17,11 +17,10 @@
 			&__circle-one {
 				transform: translate(80%, 0%);
 				display: flex;
-                
 			}
 			&__circle-two {
 				transform: translate(-50%, 0%);
-                background-position: 70% 45%;
+				background-position: 70% 45%;
 			}
 			&__circle-three {
 				transform: translate(-190%, 0%);
@@ -34,13 +33,13 @@
 			scroll-margin-top: -60px;
 
 			&__box1 {
-                top: 130px;
-            }
+				top: 130px;
+			}
 
-            &__my-img-small {
-                right: 70px;
-                bottom: -65px;
-            }
+			&__my-img-small {
+				right: 70px;
+				bottom: -65px;
+			}
 		}
 	}
 }

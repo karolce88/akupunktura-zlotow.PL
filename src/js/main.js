@@ -21,11 +21,7 @@ const submenuULitems4 = document.querySelector('.submenu-LI-link4')
 const submenuULitems5 = document.querySelector('.submenu-LI-link5')
 const submenuBackBtn = document.querySelector('.nav__mobile-menu-items-back-btn')
 const mediaBar = document.querySelector('.nav__media-bar')
-
-
-
-
-
+const accordionAll = document.querySelectorAll('.aboutme__accordion')
 
 
 //dropdown menu for "offer" item (desktop):
@@ -167,15 +163,7 @@ window.addEventListener('scroll', addShadow)
 burgerBTN.addEventListener('click', showMobileMenu)
 
 // aboutme / education:
-
-const accordionAll = document.querySelectorAll('.aboutme__accordion')
-
-
-
 const showAndHideFAQeducation = (e) => {
-
-	console.log(e.target.nextElementSibling);
-
 	if (!e.target.nextElementSibling.classList.contains('show-panel')) {
 		e.target.querySelector('.aboutme__h3-education-svg-icon').classList.remove('rotate-rev-icon-aboutme')
 		e.target.nextElementSibling.classList.remove('hide-panel')
@@ -189,4 +177,7 @@ const showAndHideFAQeducation = (e) => {
 	}
 }
 
-accordionAll.forEach(clic => clic.addEventListener('click', showAndHideFAQeducation))
+accordionAll.forEach(listen => listen.addEventListener('click', showAndHideFAQeducation))
+
+// offer:
+
