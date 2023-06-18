@@ -475,6 +475,24 @@ body {
 		}
 	}
 
+	.h3-title-subsections {
+		position: relative;
+		text-transform: uppercase;
+		font-size: 20px;
+		margin-bottom: 15px;
+
+		&::before {
+			content: '';
+			position: absolute;
+			width: 30px;
+			height: 4px;
+			border-radius: 4px;
+			bottom: -8px;
+			left: 0px;
+			background: $main-pink;
+		}
+	}
+
 	.aboutme {
 		scroll-margin-top: -70px;
 		display: flex;
@@ -670,6 +688,9 @@ body {
 			margin: 0 14px;
 			display: flex;
 			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			padding-bottom: 60px;
 		}
 
 		&__text {
@@ -682,9 +703,57 @@ body {
 		}
 	
 		&__hero-picture {
+			display: none;
 			max-width: 100%;
 			height: auto;
 			margin-bottom: 15px;
+			border-radius: 4px;
+		}
+
+		&__hero-picture-small {
+			max-width: 280px;
+			height: auto;
+			margin-bottom: 15px;
+			border-radius: 4px;
+		}
+
+		&__acupuncture-offer-container {
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-wrap: wrap;
+
+			background-color: #ebcece;
+		}
+
+		&__acupuncture-square {
+			width: 50%;
+			line-height: 28px;
+			height: 500px;
+			margin: 5px;
+		}
+
+		&__acupuncture-square1 {
+			background-color: #78bdb1;
+		}
+
+		&__acupuncture-square2 {
+			background-image: url(../../dist/img/akupunktura-offer-img.jpg);
+			background-position: center;
+			border-radius: 4px;
+		}
+
+		&__acupuncture-square3 {
+			background-color: #6388b2;
+		}
+
+		&__acupuncture-square4 {
+			background-color: #da9ad8;
+		}
+
+		&__acupuncture-offer-text {
+			padding: 8px;
 		}
 	}
 }

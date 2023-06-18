@@ -170,8 +170,8 @@ const showAndHideFAQeducation = (e) => {
 		e.target.nextElementSibling.classList.add('show-panel')
 		e.target.querySelector('.aboutme__h3-education-svg-icon').classList.add('rotate-icon-aboutme')
 	} else if (e.target.nextElementSibling.classList.contains('show-panel')) {
-		e.target.nextElementSibling.classList.remove('show-panel')
 		e.target.nextElementSibling.classList.add('hide-panel')
+		e.target.nextElementSibling.classList.remove('show-panel')
 		e.target.querySelector('.aboutme__h3-education-svg-icon').classList.remove('rotate-icon-aboutme')
 		e.target.querySelector('.aboutme__h3-education-svg-icon').classList.add('rotate-rev-icon-aboutme')
 	}
