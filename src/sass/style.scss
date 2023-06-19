@@ -421,6 +421,41 @@ body {
 .main {
 	font-size: 15px;
 
+	.h2-title-sections {
+		position: relative;
+		text-transform: uppercase;
+		font-size: 26px;
+
+		&::before {
+			content: '';
+			position: absolute;
+			width: 30px;
+			height: 4px;
+			border-radius: 4px;
+			bottom: -16px;
+			left: 0px;
+			background: $main-pink;
+		}
+	}
+
+	.h3-title-subsections {
+		position: relative;
+		text-transform: uppercase;
+		font-size: 18px;
+		margin-bottom: 15px;
+
+		&::before {
+			content: '';
+			position: absolute;
+			width: 30px;
+			height: 4px;
+			border-radius: 4px;
+			bottom: -6px;
+			left: 0px;
+			background: $CTA-green;
+		}
+	}
+
 	.rings {
 		&__container {
 			position: absolute;
@@ -455,41 +490,6 @@ body {
 			background-image: url(../../dist/img/rectangle3-small.jpg);
 			background-position: 50% 50%;
 			display: none;
-		}
-	}
-
-	.h2-title-sections {
-		position: relative;
-		text-transform: uppercase;
-		font-size: 26px;
-
-		&::before {
-			content: '';
-			position: absolute;
-			width: 30px;
-			height: 4px;
-			border-radius: 4px;
-			bottom: -16px;
-			left: 0px;
-			background: $main-pink;
-		}
-	}
-
-	.h3-title-subsections {
-		position: relative;
-		text-transform: uppercase;
-		font-size: 20px;
-		margin-bottom: 15px;
-
-		&::before {
-			content: '';
-			position: absolute;
-			width: 30px;
-			height: 4px;
-			border-radius: 4px;
-			bottom: -8px;
-			left: 0px;
-			background: $main-pink;
 		}
 	}
 
@@ -718,38 +718,28 @@ body {
 		}
 
 		&__acupuncture-offer-container {
-			width: 100%;
 			display: flex;
 			justify-content: center;
 			align-items: center;
 			flex-wrap: wrap;
-
-			background-color: #ebcece;
 		}
 
 		&__acupuncture-square {
-			width: 50%;
 			line-height: 28px;
-			height: 500px;
 			margin: 5px;
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			align-items: center;
+			margin-bottom: 55px;
 		}
-
-		&__acupuncture-square1 {
-			background-color: #78bdb1;
-		}
-
+		
 		&__acupuncture-square2 {
 			background-image: url(../../dist/img/akupunktura-offer-img.jpg);
 			background-position: center;
 			border-radius: 4px;
-		}
-
-		&__acupuncture-square3 {
-			background-color: #6388b2;
-		}
-
-		&__acupuncture-square4 {
-			background-color: #da9ad8;
+			width: 300px;
+			height: 300px;
 		}
 
 		&__acupuncture-offer-text {

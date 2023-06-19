@@ -244,25 +244,25 @@
             }
         }
 
-        .offer {
-			&__container {
-				margin: 0 14px;
-				display: flex;
-                flex-direction: row;
-			}
+        // .offer {
+		// 	&__container {
+		// 		margin: 0 14px;
+		// 		display: flex;
+        //         flex-direction: row;
+		// 	}
 
-            &__hero-picture-small {
-                display: none;
-            }
+        //     &__hero-picture-small {
+        //         display: none;
+        //     }
             
-            &__hero-picture {
-                display: flex;
-                max-height: 390px;
-            }
+        //     &__hero-picture {
+        //         display: flex;
+        //         max-height: 390px;
+        //     }
 
 
 
-		}
+		// }
     }
 }
  
