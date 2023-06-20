@@ -733,6 +733,13 @@ body {
 			align-items: center;
 			margin-bottom: 55px;
 		}
+
+		&__acupuncture-square2-container {
+			min-width: 300px;
+			min-height: 300px;
+
+			background-color: #fff;
+		}
 		
 		&__acupuncture-square2 {
 			background-image: url(../../dist/img/akupunktura-offer-img.jpg);

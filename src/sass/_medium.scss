@@ -60,12 +60,10 @@
                 top: 190px;
             }
 
-
             &__box-sentence {
                 background-position: 0% 100%;
             }
         
-            
             &__box-sentence-inside {
                 display: flex;
                 flex-direction: column;
@@ -77,16 +75,15 @@
             }
     
             &__my-img-small {
-                display: none;
+                display: flex;
+            }
+
+            &__text-sentence {
+                left: -35%;
             }
 
             &__my-img-big {
-                display: flex;
-                position: absolute;
-                max-width: 100%;
-                height: auto;
-                right: 10px;
-                bottom: -80px;
+                display: none;
             }
 
             &__quote-icon {
@@ -100,6 +97,18 @@
                 left: 14px;
             }
         }
+
+        &__acupuncture-offer-container {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-wrap: nowrap;
+		}
+
+		&__acupuncture-square {
+			min-width: 300px;
+            min-height: 300px;
+		}
 
 
     }
