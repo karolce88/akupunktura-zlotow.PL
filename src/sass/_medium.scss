@@ -1,104 +1,100 @@
-@media(min-width: 768px) {
-    
-    .header {
-        &__h1-head {
-            font-size: 34px;
-            color: $h1-heading;
-            width: min-content;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            line-height: 34px;
-            font-family: 'fira sans-bold';
-            font-weight: 700;
-            z-index: 10;
-        }
+@media (min-width: 768px) {
+	.header {
+		&__h1-head {
+			font-size: 34px;
+			color: $h1-heading;
+			width: min-content;
+			letter-spacing: 3px;
+			text-transform: uppercase;
+			line-height: 34px;
+			font-family: 'fira sans-bold';
+			font-weight: 700;
+			z-index: 10;
+		}
 
-        &__paragraph {
-            padding-top: 20px;
-            font-size: 26px;
-        }
-    }
+		&__paragraph {
+			padding-top: 20px;
+			font-size: 26px;
+		}
+	}
 
-    .main {
-    
-        .rings {
-    
-            &__container {
-                position: absolute;
-                top: 540px;
-                left: 0;
-                width: 100%;
-                height: 160px;
-            }
-        
-            
-            &__circle{
-                height: 200px;
-                width: 200px;
-                z-index: 1;
-            }
-    
-            &__circle-one {
-                transform: translate(80%, 0%);
-                background-image: url(../../dist/img/rectangle1-big.jpg);
-            }
-            &__circle-two {
-                transform: translate(-50%, 0%);
-                background-image: url(../../dist/img/rectangle2-big.jpg);
-                background-position: 85% 45%;
-            }
-            &__circle-three {
-                transform: translate(-180%, 0%);
-                background-image: url(../../dist/img/rectangle3-big.jpg);			
-            }
-        }
+	.main {
+		.rings {
+			&__container {
+				position: absolute;
+				top: 540px;
+				left: 0;
+				width: 100%;
+				height: 160px;
+			}
 
-        .aboutme{
-            scroll-margin-top: -120px;
-            
-            &__box1 {
-                top: 190px;
-            }
+			&__circle {
+				height: 200px;
+				width: 200px;
+				z-index: 1;
+			}
 
-            &__box-sentence {
-                background-position: 0% 100%;
-            }
-        
-            &__box-sentence-inside {
-                display: flex;
-                flex-direction: column;
-                width: 450px;
-            }
+			&__circle-one {
+				transform: translate(80%, 0%);
+				background-image: url(../../dist/img/rectangle1-big.jpg);
+			}
+			&__circle-two {
+				transform: translate(-50%, 0%);
+				background-image: url(../../dist/img/rectangle2-big.jpg);
+				background-position: 85% 45%;
+			}
+			&__circle-three {
+				transform: translate(-180%, 0%);
+				background-image: url(../../dist/img/rectangle3-big.jpg);
+			}
+		}
 
-            &__text-sentence {
-                padding: 20px;
-            }
-    
-            &__my-img-small {
-                display: flex;
-            }
+		.aboutme {
+			scroll-margin-top: -120px;
 
-            &__text-sentence {
-                left: -35%;
-            }
+			&__box1 {
+				top: 190px;
+			}
 
-            &__my-img-big {
-                display: none;
-            }
+			&__box-sentence {
+				background-position: 0% 100%;
+			}
 
-            &__quote-icon {
-                display: none;
-            }
+			&__box-sentence-inside {
+				display: flex;
+				flex-direction: column;
+				width: 450px;
+			}
 
-            &__quote-icon-big {
-                display: flex;
-                position: absolute;
-                top: -10px;
-                left: 14px;
-            }
-        }
+			&__text-sentence {
+				padding: 20px;
+			}
 
-        &__acupuncture-offer-container {
+			&__my-img-small {
+				display: flex;
+			}
+
+			&__text-sentence {
+				left: -35%;
+			}
+
+			&__my-img-big {
+				display: none;
+			}
+
+			&__quote-icon {
+				display: none;
+			}
+
+			&__quote-icon-big {
+				display: flex;
+				position: absolute;
+				top: -10px;
+				left: 14px;
+			}
+		}
+
+		&__acupuncture-offer-container {
 			display: flex;
 			justify-content: center;
 			align-items: center;
@@ -107,10 +103,14 @@
 
 		&__acupuncture-square {
 			min-width: 300px;
-            min-height: 300px;
+			min-height: 300px;
 		}
 
-
-    }
-
-} 
+		.offer {
+			&__acupuncture-sentence-text {
+				max-width: 450px;
+				padding-right: 50px;
+			}
+		}
+	}
+}

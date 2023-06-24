@@ -674,8 +674,9 @@ body {
 	}
 
 	.offer {
-		scroll-margin-top: -350px;
+		scroll-margin-top: -280px;
 		background-color: $little-gray;
+		overflow-y: hidden;
 
 		&__title-center {
 			display: flex;
@@ -722,11 +723,13 @@ body {
 			justify-content: center;
 			align-items: center;
 			flex-wrap: wrap;
+			scroll-margin-top: 60px;
+			margin-top: 60px;
 		}
 
 		&__acupuncture-square {
 			line-height: 28px;
-			margin: 5px;
+			// margin: 5px;
 			display: flex;
 			justify-content: center;
 			flex-direction: column;
@@ -734,11 +737,13 @@ body {
 			margin-bottom: 55px;
 		}
 
-		&__acupuncture-square2-container {
-			min-width: 300px;
-			min-height: 300px;
-
-			background-color: #fff;
+		// &__acupuncture-square2-container {
+		// 	min-width: 300px;
+		// 	min-height: 300px;
+		// }
+		
+		&__acupuncture-square2-desktop {
+			display: none;
 		}
 		
 		&__acupuncture-square2 {
@@ -750,7 +755,123 @@ body {
 		}
 
 		&__acupuncture-offer-text {
+			// padding: 8px;
+			margin: 0 14px;
+		}
+
+		&__acupuncture-offer-container-desktop {
+			display: none;
+		}
+
+		&__indications {
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
 			padding: 8px;
+			border-radius: 4px;
+			margin-top: 70px;
+			
+			width: 100%;
+		}
+
+		&__indications-margin {
+			margin-top: 50px;
+		}
+		
+		&__indications-box-items {
+			padding: 15px 0;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			width: 100%;
+		}
+		
+		&__indications-items-border-bottom {
+			margin-top: 15px;
+			height: 1px;
+			background-color: $black-text;
+			width: 60%;
+		}
+
+		&__indications-items {
+			border: 1px solid $black-text;
+			border-radius: 4px;
+			padding: 7px 15px;
+			margin: 4px 4px;
+			font-size: 12px;
+			letter-spacing: 1px;
+			word-spacing: 2px;
+		}
+
+		&__indications-h4 {
+			padding: 20px 0;
+			text-align: center;
+			line-height: 25px;
+		}
+
+		&__acupuncture-sentence {
+			background-image: url(../../dist/img/akcesoria-spa-na-ciemnym-tle.jpg);
+			background-position: center;
+			background-size: cover;  
+			padding: 150px 0;
+			margin: 100px 0;
+			display: flex;
+			justify-content: flex-end;
+		}
+
+		&__acupuncture-sentence-text {
+			color: $bg-white;
+			max-width: 240px;
+			font-family: 'fira sans-italic';
+			font-weight: italic;
+			line-height: 28px;
+			letter-spacing: 2px;
+			font-size: 18px;
+			font-weight: bold;
+		}
+
+		&__indications-items-bold {
+			font-weight: bold;
+			font-size: 13px;
+		}
+
+		&__indications-box-items-column {
+			display: flex;
+			flex-direction: column;
+			flex-wrap: wrap;
+		}
+
+		&__indications-box-items-row {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
+			flex-wrap: wrap;
+		}
+
+		&__indications-who {
+			display: flex;
+			justify-content: flex-start;
+			flex-direction: column;
+			overflow: hidden;
+			height: 212px; /* height !!!!!!!*/
+
+			transition: all .3s;
+		}
+
+		&__indications-items-border-bottom-two {
+			position: relative;
+			margin-bottom: 60px;
+			display: flex;
+			justify-content: center;
+
+		}
+
+		&__indications-items-border-bottom-two-arrow {
+			position: absolute;
+			top: -10px;
 		}
 	}
 }
