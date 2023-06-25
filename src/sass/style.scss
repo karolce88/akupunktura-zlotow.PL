@@ -870,12 +870,29 @@ body {
 			margin-bottom: 60px;
 			display: flex;
 			justify-content: center;
-
 		}
 
 		&__indications-items-border-bottom-two-arrow {
 			position: absolute;
 			top: -10px;
+			cursor: pointer;
+			transition: all .3s;
+		}
+
+		.show-offer-indication {
+			animation: showOfferIndications 1s ease forwards;
+		}
+
+		.close-offer-indication {
+			animation: closeOfferIndications 0.8s ease forwards;
+		}
+
+		.rotate-offer-indication {
+			animation: rotateIndicationOffer 1s ease forwards;
+		}
+		
+		.rotate-rev-offer-indication {
+			animation: rotateIndicationOffer-Rev 1s ease forwards;
 		}
 	}
 }

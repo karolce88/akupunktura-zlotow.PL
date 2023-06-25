@@ -22,6 +22,9 @@ const submenuULitems5 = document.querySelector('.submenu-LI-link5')
 const submenuBackBtn = document.querySelector('.nav__mobile-menu-items-back-btn')
 const mediaBar = document.querySelector('.nav__media-bar')
 const accordionAll = document.querySelectorAll('.aboutme__accordion')
+const arrowOfferClick = document.querySelector('.offer__indications-items-border-bottom-two-arrow')
+const offerIndicationInfo = document.querySelector('.offer__indications-who')
+
 
 
 //dropdown menu for "offer" item (desktop):
@@ -181,3 +184,19 @@ accordionAll.forEach(listen => listen.addEventListener('click', showAndHideFAQed
 
 // offer:
 
+
+const ShowSickList = () => {
+	if (!arrowOfferClick.classList.contains('rotate-offer-indication')) {
+		arrowOfferClick.classList.add('rotate-offer-indication')
+		offerIndicationInfo.classList.add('show-offer-indication')
+		arrowOfferClick.classList.remove('rotate-rev-offer-indication')
+		offerIndicationInfo.classList.remove('close-offer-indication')
+	} else if (arrowOfferClick.classList.contains('rotate-offer-indication')) {
+		arrowOfferClick.classList.add('rotate-rev-offer-indication')
+		offerIndicationInfo.classList.add('close-offer-indication')
+		arrowOfferClick.classList.remove('rotate-offer-indication')
+		offerIndicationInfo.classList.remove('show-offer-indication')
+	}
+}
+
+arrowOfferClick.addEventListener('click', ShowSickList)

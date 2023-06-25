@@ -87,3 +87,39 @@
 		height: 0px;
 	}
 }
+
+@keyframes showOfferIndications {
+	from {
+		height: 212px;
+	}
+	to {
+		height: auto;
+	}
+}
+
+@keyframes closeOfferIndications {
+	from {
+		height: auto;
+	}
+	to {
+		height: 212px;
+	}
+}
+
+@keyframes rotateIndicationOffer {
+	from {
+		rotate: 0;
+	}
+	to {
+		rotate: 180deg;
+	}
+}
+
+@keyframes rotateIndicationOffer-Rev {
+	from {
+		rotate: 180deg;
+	}
+	to {
+		rotate: 0;
+	}
+}
