@@ -518,6 +518,7 @@ body {
 			z-index: 1;
 			padding-bottom: 25px;
 			line-height: 28px;
+			text-align: justify;
 		}
 
 		&__span-bold {
@@ -675,7 +676,9 @@ body {
 
 	.offer {
 		scroll-margin-top: -280px;
-		background-color: $little-gray;
+		// background-color: $little-gray;
+		// background-color: #d1eacfd1;
+		background-color: #ffffffcc;
 		overflow-y: hidden;
 
 		&__title-center {
@@ -701,6 +704,7 @@ body {
 			justify-content: center;
 			align-items: center;
 			margin-right: 15px;
+			text-align: justify;
 		}
 	
 		&__hero-picture {
@@ -755,7 +759,7 @@ body {
 		}
 
 		&__acupuncture-offer-text {
-			// padding: 8px;
+			text-align: justify;    
 			margin: 0 14px;
 		}
 
