@@ -111,6 +111,17 @@
 				max-width: 450px;
 				padding-right: 50px;
 			}
+
+            &__dietetics-icon-container {
+                flex-direction: row;
+                justify-content: space-around;
+                width: 100%;
+            }
+
+            &__acupuncture-container-sentence-text {
+                width: 40%;
+            }
+    
 		}
 	}
 }
