@@ -112,16 +112,44 @@
 				padding-right: 50px;
 			}
 
-            &__dietetics-icon-container {
-                flex-direction: row;
-                justify-content: space-around;
-                width: 100%;
+			&__dietetics-icon-container {
+				flex-direction: row;
+				justify-content: space-around;
+				width: 100%;
+			}
+
+			&__acupuncture-container-sentence-text {
+				width: 40%;
+			}
+
+			&__herbal-medicine-container {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-around;
+			}
+
+            &__herbal-medicine-img {
+                padding: 15px;
             }
 
-            &__acupuncture-container-sentence-text {
-                width: 40%;
+
+            &__chinese-medicine-container {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-around;
+			}
+
+            &__chinese-medicine-img {
+                padding: 15px;
             }
-    
+
+            &__chinese-medicine-img-mobile {
+                display: none;
+            }
+
+            &__chinese-medicine-img-desktop {
+                display: block;
+            }
 		}
 	}
 }

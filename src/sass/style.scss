@@ -251,7 +251,7 @@ body {
 		display: flex;
 		align-items: center;
 		text-decoration: none;
-		padding: 20px 30px;
+		padding: 14px 30px;
 		margin: 4px;
 		font-size: 18px;
 		text-transform: uppercase;
@@ -292,6 +292,7 @@ body {
 		font-family: fira sans-bold;
 		background-color: $bg-white;
 		cursor: pointer;
+		border-bottom: 1px solid $little-gray;
 
 		&:hover {
 			color: $main-pink;
@@ -712,14 +713,14 @@ body {
 			max-width: 100%;
 			height: auto;
 			margin-bottom: 15px;
-			border-radius: 4px;
+			border-radius: 30px;
 		}
 
 		&__hero-picture-small {
 			max-width: 280px;
 			height: auto;
 			margin-bottom: 15px;
-			border-radius: 4px;
+			border-radius: 30px;
 		}
 
 		&__acupuncture-offer-container {
@@ -753,7 +754,7 @@ body {
 		&__acupuncture-square2 {
 			background-image: url(../../dist/img/akupunktura-offer-img.jpg);
 			background-position: center;
-			border-radius: 4px;
+			border-radius: 30px;
 			width: 300px;
 			height: 300px;
 		}
@@ -994,15 +995,15 @@ body {
 		}
 
 		&__dietetics-icon-items {
-			width: 200px;
-			height: 200px;
+			width: 220px;
+			height: 220px;
 			background-color: $green;
 			margin: 5px;
 			display: flex;
 			flex-direction: column;
 			align-items: center;
 			justify-content: center;
-			border-radius: 20%;
+			border-radius: 50%;
 
 			
 			&:hover .offer__dietetics-icon-items-img {
@@ -1018,6 +1019,8 @@ body {
 			margin-top: 20px;
 			text-align: center;
 			font-weight: bold;
+			width: 170px;
+			line-height: 21px;
 		}
 
 		&__hipocrates-container {
@@ -1029,7 +1032,7 @@ body {
 		
 		&__hippocrates-text-box {
 			padding: 15px;
-			background-color: $bg-white;
+			background-color: $bg-white-transparent;
 			border-radius: 20px;
 			margin-top: 10px;
 			display: flex;
@@ -1043,6 +1046,7 @@ body {
 			// letter-spacing: 1px;
 			font-size: 16px;
 			font-weight: bold;
+			border: 1px solid $little-gray;
 		}
 
 		&__hippocrates-text-hippocrates {
@@ -1051,6 +1055,21 @@ body {
 
 		&__hippocrates-text-hippocrates-sentence {
 			text-align: center;
+		}
+
+		&__herbal-medicine-container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		&__herbal-medicine-img {
+			margin-top: 40px;
+			height: auto;
+			width: 100%; 
+			min-width: 240px;   
+			border-radius: 30px;
+			padding: 0 8px;
 		}
 
 		&__herbal-medicine-text {
@@ -1066,6 +1085,42 @@ body {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
+		}
+
+
+		&__chinese-medicine-container {
+			margin-top: 100px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		&__chinese-medicine-img {
+			margin-top: 40px;
+			height: auto;
+			width: 100%; 
+			min-width: 240px;   
+			border-radius: 30px;
+			padding: 0 8px;
+		}
+
+		&__chinese-medicine-text {
+			text-align: justify;    
+			margin: 0 14px;
+			line-height: 28px;
+			margin-top: 4px;
+			height: auto;
+		}
+
+		&__chinese-medicine-box {
+			scroll-margin-top: 80px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		&__chinese-medicine-img-desktop {
+			display: none;
 		}
 	}
 }
