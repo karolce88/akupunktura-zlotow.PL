@@ -112,11 +112,22 @@
 				padding-right: 50px;
 			}
 
+            &__dietetics {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                padding: 0px 0 80px 0;
+            }
+
 			&__dietetics-icon-container {
 				flex-direction: row;
 				justify-content: space-around;
 				width: 100%;
 			}
+
+            &__hippocrates-text-hippocrates-sentence {
+                width: 250px;
+            }
 
 			&__acupuncture-container-sentence-text {
 				width: 40%;
@@ -148,6 +159,55 @@
             }
 
             &__chinese-medicine-img-desktop {
+                display: block;
+            }
+
+
+            &__massage-container {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-around;
+			}
+
+            &__massage-img {
+                padding: 15px;
+            }
+
+            &__massage-img-mobile {
+                display: none;
+            }
+
+            &__massage-img-desktop {
+                display: block;
+            }
+
+
+            &__bubble-container {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-around;
+			}
+
+            &__bubble-img {
+                padding: 15px;
+            }
+
+
+            &__heat-therapy-container {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-around;
+			}
+
+            &__heat-therapy-img {
+                padding: 15px;
+            }
+
+            &__heat-therapy-img-mobile {
+                display: none;
+            }
+
+            &__heat-therapy-img-desktop {
                 display: block;
             }
 		}
