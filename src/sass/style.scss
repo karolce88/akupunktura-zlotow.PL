@@ -678,10 +678,9 @@ body {
 
 	.offer {
 		scroll-margin-top: -280px;
-		// background-color: $little-gray;
-		// background-color: #d1eacfd1;
-		background-color: #ffffffcc;
+		background-color: $bg-offer-section;
 		overflow-y: hidden;
+
 
 		&__title-center {
 			display: flex;
@@ -1305,6 +1304,46 @@ body {
 			align-items: center;
 			margin-right: 15px;
 			transition: all 0.3s;
+		}
+	}
+
+	.title-space123 {
+		padding-bottom: 60px;
+	}
+
+	.price-list {
+		background-color: $bg-white;
+		// background-color: white;
+		height: 500px;
+
+
+		&__table {
+			// border: 1px solid $little-gray;
+			margin: 0 auto;
+			text-align: center;
+			margin: 0 15px;
+			font-size: 1rem;
+			border: 5px;
+			font-size: 13px;
+			margin-top: 20px;
+		}
+
+		&__table-head {
+			background-color: $little-gray;
+			color: $black-text;
+			// padding: 8px 0;
+		}
+
+		&__table-head-row {
+			padding: 20px 8px;
+		}
+
+		&__tbody-row {
+			background-color: white;
+		}
+
+		&__tbody-row-items {
+			padding: 20px 8px;
 		}
 	}
 }
