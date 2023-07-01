@@ -210,6 +210,17 @@
             &__heat-therapy-img-desktop {
                 display: block;
             }
+
+
+            &__trainings-container {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-around;
+			}
+
+            &__trainings-img {
+                padding: 15px;
+            }
 		}
 	}
 }

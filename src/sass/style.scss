@@ -619,6 +619,7 @@ body {
 			border-radius: 4px;
 			padding: 15px 15px;
 			font-size: 15px;
+			pointer-events: none;
 		}
 
 		&__panel {
@@ -708,20 +709,20 @@ body {
 			text-align: justify;
 		}
 	
-		&__hero-picture {
-			display: none;
-			max-width: 100%;
-			height: auto;
-			margin-bottom: 15px;
-			border-radius: 30px;
-		}
+		// &__hero-picture {
+		// 	display: none;
+		// 	max-width: 100%;
+		// 	height: auto;
+		// 	margin-bottom: 15px;
+		// 	border-radius: 30px;
+		// }
 
-		&__hero-picture-small {
-			max-width: 280px;
-			height: auto;
-			margin-bottom: 15px;
-			border-radius: 30px;
-		}
+		// &__hero-picture-small {
+		// 	max-width: 280px;
+		// 	height: auto;
+		// 	margin-bottom: 15px;
+		// 	border-radius: 30px;
+		// }
 
 		&__acupuncture-offer-container {
 			display: flex;
@@ -753,10 +754,10 @@ body {
 		
 		&__acupuncture-square2 {
 			background-image: url(../../dist/img/akupunktura-offer-img.jpg);
-			background-position: center;
+			background-position: top center;
 			border-radius: 30px;
-			width: 300px;
-			height: 300px;
+			width: 290px;
+			height: 400px;
 		}
 
 		&__acupuncture-offer-text {
@@ -1236,6 +1237,74 @@ body {
 
 		&__heat-therapy-img-desktop {
 			display: none;
+		}
+
+
+		&__trainings-container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		&__trainings-img {
+			margin-top: 40px;
+			height: auto;
+			width: 100%; 
+			min-width: 240px;   
+			border-radius: 30px;
+			padding: 0 8px;
+		}
+
+		&__trainings-text {
+			text-align: justify;    
+			margin: 0 14px;
+			line-height: 28px;
+			margin-top: 4px;
+			height: auto;
+		}
+
+		&__trainings-box {
+			scroll-margin-top: 80px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+
+		&__button {
+			margin-top: 75px;
+			width: 210px;
+			height: 44px;
+			border: none;
+			background-color: $CTA-green;
+			border-radius: 4px;
+			color: $bg-white;
+			font-family: 'fira sans-bold';
+			font-size: 14px;
+			letter-spacing: 0.5px;
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			text-decoration: none;
+	
+			&:hover .offer__vertical-bar {
+				margin-right: 20px;
+			}
+		}
+	
+		&__button-text {
+			margin-left: 24px;
+		}
+	
+		&__vertical-bar {
+			margin-left: 20px;
+			width: 1px;
+			height: 100%;
+			background-color: rgb(154, 216, 146);
+			display: flex;
+			align-items: center;
+			margin-right: 15px;
+			transition: all 0.3s;
 		}
 	}
 }
