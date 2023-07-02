@@ -1311,6 +1311,10 @@ body {
 		padding-bottom: 60px;
 	}
 
+	.h3-padding-bottom {
+		padding-top: 80px;
+	}
+
 	.price-list {
 		background-color: $bg-white;
 		// background-color: white;
@@ -1326,6 +1330,7 @@ body {
 			border: 5px;
 			font-size: 13px;
 			margin-top: 20px;
+			width: 100%;
 		}
 
 		&__table-head {
@@ -1336,15 +1341,29 @@ body {
 
 		&__table-head-row {
 			padding: 20px 8px;
+			border-radius: 5px;
 		}
 
 		&__tbody-row {
-			background-color: white;
+			background-color: $white-table-price-list;
+			border-radius: 5px;
+
+			&:nth-child(even) {
+				background-color: $little-white-table-price-list;
+			}
+
+			&:hover {
+				background-color: rgb(234, 238, 231);
+			}
 		}
 
 		&__tbody-row-items {
-			padding: 20px 8px;
+			padding: 20px 14px;
 		}
+
+		// &__price-item {
+		// 	padding: 20px 14px;
+		// }
 	}
 }
 
