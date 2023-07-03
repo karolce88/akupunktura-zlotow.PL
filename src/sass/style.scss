@@ -660,11 +660,11 @@ body {
 		}
 
 		.show-panel {
-			animation: showEducationList .3s ease-in forwards;
+			animation: showEducationList 0.3s ease-in forwards;
 		}
 
 		.hide-panel {
-			animation: closeEducationList .3s ease-in forwards;
+			animation: closeEducationList 0.3s ease-in forwards;
 		}
 
 		.rotate-icon-aboutme {
@@ -680,7 +680,6 @@ body {
 		scroll-margin-top: -280px;
 		background-color: $bg-offer-section;
 		overflow-y: hidden;
-
 
 		&__title-center {
 			display: flex;
@@ -707,21 +706,6 @@ body {
 			// margin-right: 15px;
 			text-align: justify;
 		}
-	
-		// &__hero-picture {
-		// 	display: none;
-		// 	max-width: 100%;
-		// 	height: auto;
-		// 	margin-bottom: 15px;
-		// 	border-radius: 30px;
-		// }
-
-		// &__hero-picture-small {
-		// 	max-width: 280px;
-		// 	height: auto;
-		// 	margin-bottom: 15px;
-		// 	border-radius: 30px;
-		// }
 
 		&__acupuncture-offer-container {
 			display: flex;
@@ -742,15 +726,10 @@ body {
 			margin-bottom: 55px;
 		}
 
-		// &__acupuncture-square2-container {
-		// 	min-width: 300px;
-		// 	min-height: 300px;
-		// }
-		
 		&__acupuncture-square2-desktop {
 			display: none;
 		}
-		
+
 		&__acupuncture-square2 {
 			background-image: url(../../dist/img/akupunktura-offer-img.jpg);
 			background-position: top center;
@@ -760,7 +739,7 @@ body {
 		}
 
 		&__acupuncture-offer-text {
-			text-align: justify;    
+			text-align: justify;
 			margin: 0 14px;
 		}
 
@@ -786,7 +765,7 @@ body {
 		&__indications-margin {
 			margin-top: 50px;
 		}
-		
+
 		&__indications-box-items {
 			padding: 15px 0;
 			display: flex;
@@ -794,7 +773,7 @@ body {
 			justify-content: center;
 			width: 100%;
 		}
-		
+
 		&__indications-items-border-bottom {
 			margin-top: 15px;
 			height: 1px;
@@ -821,12 +800,12 @@ body {
 		&__acupuncture-sentence {
 			background-image: url(../../dist/img/akcesoria-spa-na-ciemnym-tle.jpg);
 			background-position: center;
-			background-size: cover;  
-			padding: 160px 0;
+			background-size: cover;
+			padding: 120px 0;
 			margin: 100px 0;
 			display: flex;
 			// justify-content: flex-start;
-			// background-attachment: fixed;  
+			// background-attachment: fixed;
 			flex-direction: column;
 			align-items: flex-end;
 		}
@@ -867,7 +846,7 @@ body {
 			flex-direction: column;
 			overflow: hidden;
 			height: 212px; /* height !!!!!!!*/
-			transition: all .3s;
+			transition: all 0.3s;
 		}
 
 		&__indications-items-border-bottom-two {
@@ -882,7 +861,7 @@ body {
 			position: absolute;
 			top: -10px;
 			cursor: pointer;
-			transition: all .3s;
+			transition: all 0.3s;
 		}
 
 		.show-offer-indication {
@@ -896,7 +875,7 @@ body {
 		.rotate-offer-indication {
 			animation: rotateIndicationOffer 1s ease forwards;
 		}
-		
+
 		.rotate-rev-offer-indication {
 			animation: rotateIndicationOffer-Rev 1s ease forwards;
 		}
@@ -904,14 +883,14 @@ body {
 		&__acupuncture-sentence-WHO {
 			background-image: url(../../dist/img/drzewo.jpg);
 			background-position: 40% 35%;
-			background-size: cover;  
-			padding: 180px 0;
+			background-size: cover;
+			padding: 120px 0;
 			margin: 100px 0;
 			display: flex;
 			justify-content: flex-start;
 			background-attachment: fixed;
 		}
-		
+
 		&__acupuncture-sentence-text-WHO {
 			font-family: 'fira sans-italic';
 			font-weight: italic;
@@ -928,7 +907,7 @@ body {
 			justify-content: flex-end;
 			margin-right: 25px;
 		}
-		
+
 		&__acupuncture-container-sentence-text {
 			background-color: #333333cd;
 			border-radius: 20px;
@@ -965,7 +944,7 @@ body {
 		}
 
 		&__dietetics-text {
-			text-align: justify;    
+			text-align: justify;
 			margin: 0 14px;
 			line-height: 28px;
 			margin-top: 4px;
@@ -985,7 +964,7 @@ body {
 			align-items: center;
 			flex-direction: column;
 		}
-		
+
 		&__dietetics-icon-container {
 			display: flex;
 			justify-content: space-between;
@@ -994,7 +973,7 @@ body {
 		}
 
 		&__dietetics-icon-items-img {
-			transition: all .3s;
+			transition: all 0.3s;
 		}
 
 		&__dietetics-icon-items {
@@ -1008,7 +987,6 @@ body {
 			justify-content: center;
 			border-radius: 50%;
 
-			
 			&:hover .offer__dietetics-icon-items-img {
 				scale: 0.8;
 			}
@@ -1032,7 +1010,7 @@ body {
 			flex-direction: column;
 			align-items: center;
 		}
-		
+
 		&__hippocrates-text-box {
 			padding: 15px;
 			background-color: $bg-white-transparent;
@@ -1069,14 +1047,14 @@ body {
 		&__herbal-medicine-img {
 			margin-top: 40px;
 			height: auto;
-			width: 100%; 
-			min-width: 240px;   
+			width: 100%;
+			min-width: 240px;
 			border-radius: 30px;
 			padding: 0 8px;
 		}
 
 		&__herbal-medicine-text {
-			text-align: justify;    
+			text-align: justify;
 			margin: 0 14px;
 			line-height: 28px;
 			margin-top: 4px;
@@ -1090,7 +1068,6 @@ body {
 			align-items: center;
 		}
 
-
 		&__chinese-medicine-container {
 			margin-top: 100px;
 			display: flex;
@@ -1102,14 +1079,14 @@ body {
 		&__chinese-medicine-img {
 			margin-top: 40px;
 			height: auto;
-			width: 100%; 
-			min-width: 240px;   
+			width: 100%;
+			min-width: 240px;
 			border-radius: 30px;
 			padding: 0 8px;
 		}
 
 		&__chinese-medicine-text {
-			text-align: justify;    
+			text-align: justify;
 			margin: 0 14px;
 			line-height: 28px;
 			margin-top: 4px;
@@ -1127,8 +1104,6 @@ body {
 			display: none;
 		}
 
-
-
 		&__massage-container {
 			margin-top: 100px;
 			display: flex;
@@ -1140,14 +1115,14 @@ body {
 		&__massage-img {
 			margin-top: 40px;
 			height: auto;
-			width: 100%; 
-			min-width: 240px;   
+			width: 100%;
+			min-width: 240px;
 			border-radius: 30px;
 			padding: 0 8px;
 		}
 
 		&__massage-text {
-			text-align: justify;    
+			text-align: justify;
 			margin: 0 14px;
 			line-height: 28px;
 			margin-top: 4px;
@@ -1165,7 +1140,6 @@ body {
 			display: none;
 		}
 
-
 		&__bubble-container {
 			display: flex;
 			flex-direction: column;
@@ -1176,14 +1150,14 @@ body {
 		&__bubble-img {
 			margin-top: 40px;
 			height: auto;
-			width: 100%; 
-			min-width: 240px;   
+			width: 100%;
+			min-width: 240px;
 			border-radius: 30px;
 			padding: 0 8px;
 		}
 
 		&__bubble-text {
-			text-align: justify; 
+			text-align: justify;
 			margin: 0 14px;
 			line-height: 28px;
 			margin-top: 4px;
@@ -1201,7 +1175,6 @@ body {
 			align-items: center;
 		}
 
-
 		&__heat-therapy-container {
 			margin-top: 100px;
 			display: flex;
@@ -1213,14 +1186,14 @@ body {
 		&__heat-therapy-img {
 			margin-top: 40px;
 			height: auto;
-			width: 100%; 
-			min-width: 240px;   
+			width: 100%;
+			min-width: 240px;
 			border-radius: 30px;
 			padding: 0 8px;
 		}
 
 		&__heat-therapy-text {
-			text-align: justify;    
+			text-align: justify;
 			margin: 0 14px;
 			line-height: 28px;
 			margin-top: 4px;
@@ -1238,7 +1211,6 @@ body {
 			display: none;
 		}
 
-
 		&__trainings-container {
 			display: flex;
 			flex-direction: column;
@@ -1248,14 +1220,14 @@ body {
 		&__trainings-img {
 			margin-top: 40px;
 			height: auto;
-			width: 100%; 
-			min-width: 240px;   
+			width: 100%;
+			min-width: 240px;
 			border-radius: 30px;
 			padding: 0 8px;
 		}
 
 		&__trainings-text {
-			text-align: justify;    
+			text-align: justify;
 			margin: 0 14px;
 			line-height: 28px;
 			margin-top: 4px;
@@ -1268,7 +1240,6 @@ body {
 			flex-direction: column;
 			align-items: center;
 		}
-
 
 		&__button {
 			margin-top: 75px;
@@ -1285,16 +1256,16 @@ body {
 			justify-content: flex-start;
 			align-items: center;
 			text-decoration: none;
-	
+
 			&:hover .offer__vertical-bar {
 				margin-right: 20px;
 			}
 		}
-	
+
 		&__button-text {
 			margin-left: 24px;
 		}
-	
+
 		&__vertical-bar {
 			margin-left: 20px;
 			width: 1px;
@@ -1307,6 +1278,10 @@ body {
 		}
 	}
 
+	.svg-file-offer-section-bottom {
+		vertical-align: bottom;
+	}
+
 	.title-space123 {
 		padding-bottom: 60px;
 	}
@@ -1317,9 +1292,6 @@ body {
 
 	.price-list {
 		background-color: $bg-white;
-		// background-color: white;
-		height: 500px;
-
 
 		&__table {
 			// border: 1px solid $little-gray;
@@ -1360,10 +1332,15 @@ body {
 		&__tbody-row-items {
 			padding: 20px 14px;
 		}
+	}
 
-		// &__price-item {
-		// 	padding: 20px 14px;
-		// }
+	.opinion {
+		background-color: $bg-offer-section;
+		height: 1000px;
+		// overflow-x: hidden;
+		
+
+		
 	}
 }
 

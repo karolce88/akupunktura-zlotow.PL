@@ -206,3 +206,11 @@ const ShowSickList = () => {
 }
 
 arrowOfferClick.addEventListener('click', ShowSickList)
+
+
+/* OPINION SLIDER: */ 
+
+
+
+/* END - OPINION SLIDER: */ 
+
