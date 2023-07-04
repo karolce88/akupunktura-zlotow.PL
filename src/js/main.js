@@ -27,6 +27,7 @@ const mediaBar = document.querySelector('.nav__media-bar')
 const accordionAll = document.querySelectorAll('.aboutme__accordion')
 const arrowOfferClick = document.querySelector('.offer__indications-items-border-bottom-two-arrow')
 const offerIndicationInfo = document.querySelector('.offer__indications-who')
+const FaqAll = document.querySelectorAll('.faq__faq-box')
 
 
 
@@ -188,7 +189,7 @@ const showAndHideFAQeducation = (e) => {
 
 accordionAll.forEach(listen => listen.addEventListener('click', showAndHideFAQeducation))
 
-// offer:
+// offer section:
 
 
 const ShowSickList = () => {
@@ -208,9 +209,28 @@ const ShowSickList = () => {
 arrowOfferClick.addEventListener('click', ShowSickList)
 
 
-/* OPINION SLIDER: */ 
+// FAQ
+
+const showFaqInfo = (e) => {
+	if (!e.target.nextElementSibling.classList.contains('show-panel-faq')) {
+		e.target.querySelector('.faq__h3-faq-svg-icon').classList.remove('rotate-rev-icon-faq')
+		e.target.nextElementSibling.classList.remove('hide-panel-faq')
+		e.target.nextElementSibling.classList.add('show-panel-faq')
+		e.target.querySelector('.faq__h3-faq-svg-icon').classList.add('rotate-icon-faq')
+	} else if (e.target.nextElementSibling.classList.contains('show-panel-faq')) {
+		e.target.nextElementSibling.classList.add('hide-panel-faq')
+		e.target.nextElementSibling.classList.remove('show-panel-faq')
+		e.target.querySelector('.faq__h3-faq-svg-icon').classList.remove('rotate-icon-faq')
+		e.target.querySelector('.faq__h3-faq-svg-icon').classList.add('rotate-rev-icon-faq')
+	}
+}
+
+FaqAll.forEach(listen => listen.addEventListener('click', showFaqInfo))
+
+
+/* SECTION "OPINION" SLIDER: */ 
 
 
 
-/* END - OPINION SLIDER: */ 
+/* END -  SECTION "OPINION" SLIDER */ 
 

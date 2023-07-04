@@ -286,5 +286,20 @@
 			}
 
 		}
+
+        .price-list {
+			background-color: $bg-white;
+	
+			&__table {
+				font-size: 15px;
+			}
+		}
 	}
+
+    .faq {
+
+        &__container {
+            width: 65%;
+        }
+    }
 }

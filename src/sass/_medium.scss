@@ -222,5 +222,23 @@
                 padding: 15px;
             }
 		}
+
+        .price-list {
+			background-color: $bg-white;
+	
+			&__table {
+				font-size: 15px;
+			}
+		}
+
+        .faq {
+			&__question-faq {
+				font-size: 15px;
+			}
+			
+			&__answer-faq {
+				font-size: 15px;
+			}
+		}
 	}
 }

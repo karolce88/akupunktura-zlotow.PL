@@ -593,7 +593,7 @@ body {
 			padding: 35px 15px;
 		}
 
-		/* faq */
+		/* faq - education offer */
 
 		&__accordion {
 			width: 100%;
@@ -1298,11 +1298,12 @@ body {
 			margin: 0 auto;
 			text-align: center;
 			margin: 0 15px;
-			font-size: 1rem;
 			border: 5px;
-			font-size: 13px;
+			font-size: 12px;
 			margin-top: 20px;
+			margin-bottom: 60px;
 			width: 100%;
+			line-height: 21px;
 		}
 
 		&__table-head {
@@ -1327,18 +1328,121 @@ body {
 			&:hover {
 				background-color: rgb(234, 238, 231);
 			}
+
+
 		}
 
 		&__tbody-row-items {
 			padding: 20px 14px;
+
+			&:first-child {
+				width: 25%;
+			}
+
+			&:last-child {
+				width: 10%;
+			}
 		}
 	}
 
 	.opinion {
 		background-color: $bg-offer-section;
-		height: 1000px;
-		// overflow-x: hidden;
+
+		&__svg-bottom {
+			vertical-align: bottom;
+		}
 		
+	}
+
+	.faq {
+		background-color: $bg-white;
+
+		.show-panel-faq {
+			animation: showEducationList 0.3s ease-in forwards;
+		}
+
+		.hide-panel-faq {
+			animation: closeEducationList 0.3s ease-in forwards;
+		}
+
+		.rotate-icon-faq {
+			animation: arrowIconMenuOffertItem 1s ease forwards;
+		}
+
+		.rotate-rev-icon-faq {
+			animation: arrowIconMenuOffertItemRev 1s ease forwards;
+		}
+
+		&__title-center {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-bottom: 50px;
+		}
+
+
+		&__faq-box {
+			width: 100%;
+			padding: 0 5px;
+			border: 1px solid $little-gray;
+			border-radius: 4px;
+			cursor: pointer;
+			display: flex;
+			align-items: center;
+			display: flex;
+			justify-content: space-between;
+			background: rgb(208, 208, 208);
+			background: linear-gradient(
+				0deg,
+				rgba(208, 208, 208, 1) 5%,
+				rgba(255, 255, 255, 1) 52%,
+				rgba(246, 246, 246, 1) 95%
+			);
+		}
+
+
+
+		&__panel-faq {
+			padding: 0 15px;
+			overflow: hidden;
+			transition: all 0.5s ease-in;
+			border: 1px solid $little-gray;
+			border-radius: 4px;
+			opacity: 0;
+			height: 0px;
+			transition: all 0.3s;
+			margin-bottom: 8px;
+			line-height: 21px;
+			background-color: $bg-offer-section;
+		}
+		
+		&__h3-faq-svg-icon {
+			margin: 0 10px;
+			transition: all 0.3s;
+			pointer-events: none;
+		}
+
+		&__svg-box {
+			text-align: center;
+			width: 15px;
+			height: 15px;
+			margin-right: 15px;
+		}
+
+		&__question-faq {
+			border-radius: 4px;
+			padding: 6px 15px;
+			font-size: 15px;
+			pointer-events: none;
+			font-size: 13px;
+		}
+		
+		&__answer-faq {
+			margin: 10px 0px;
+			font-size: 14px;
+			line-height: 20px;
+			font-size: 13px;
+		}
 
 		
 	}
