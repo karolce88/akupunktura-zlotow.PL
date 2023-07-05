@@ -677,7 +677,7 @@ body {
 	}
 
 	.offer {
-		scroll-margin-top: -280px;
+		scroll-margin-top: -345px;
 		background-color: $bg-offer-section;
 		overflow-y: hidden;
 
@@ -1292,6 +1292,7 @@ body {
 
 	.price-list {
 		background-color: $bg-white;
+		scroll-margin-top: 75px;
 
 		&__table {
 			// border: 1px solid $little-gray;
@@ -1304,6 +1305,7 @@ body {
 			margin-bottom: 60px;
 			width: 100%;
 			line-height: 21px;
+			padding: 0 14px;
 		}
 
 		&__table-head {
@@ -1347,6 +1349,7 @@ body {
 
 	.opinion {
 		background-color: $bg-offer-section;
+		scroll-margin-top: -350px;
 
 		&__svg-bottom {
 			vertical-align: bottom;
@@ -1354,8 +1357,51 @@ body {
 		
 	}
 
+	.blog {
+		scroll-margin-top: 75px;
+
+		&__title-center {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-bottom: 50px;
+		}
+
+		&__container {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+		
+		&__box{
+			width: 270px;
+			height: 400px;
+			background-color: $blog;
+			margin: 15px;
+			border-radius: 8px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		&__box-img {
+			width: 90%;
+			height: 60%;
+			margin: 10px;
+			background-color: #ee8f8f;
+		}
+
+		&__box-text {
+			width: 90%;
+			height: 40%;
+			margin: 10px;
+
+		}
+	}
+
 	.faq {
-		background-color: $bg-white;
+		scroll-margin-top: -350px;
+		background-color: $bg-offer-section;
 
 		.show-panel-faq {
 			animation: showEducationList 0.3s ease-in forwards;
@@ -1373,6 +1419,11 @@ body {
 			animation: arrowIconMenuOffertItemRev 1s ease forwards;
 		}
 
+		&__container {
+			margin-top: 40px;
+			padding: 0 14px;
+		}
+
 		&__title-center {
 			display: flex;
 			justify-content: center;
@@ -1380,9 +1431,9 @@ body {
 			margin-bottom: 50px;
 		}
 
-
 		&__faq-box {
 			width: 100%;
+			height: 54px;
 			padding: 0 5px;
 			border: 1px solid $little-gray;
 			border-radius: 4px;
@@ -1400,8 +1451,6 @@ body {
 			);
 		}
 
-
-
 		&__panel-faq {
 			padding: 0 15px;
 			overflow: hidden;
@@ -1412,7 +1461,7 @@ body {
 			height: 0px;
 			transition: all 0.3s;
 			margin-bottom: 8px;
-			line-height: 21px;
+			line-height: 19px;
 			background-color: $bg-offer-section;
 		}
 		
@@ -1426,15 +1475,14 @@ body {
 			text-align: center;
 			width: 15px;
 			height: 15px;
-			margin-right: 15px;
+			margin-right: 14px;
 		}
 
 		&__question-faq {
 			border-radius: 4px;
 			padding: 6px 15px;
-			font-size: 15px;
 			pointer-events: none;
-			font-size: 13px;
+			font-size: 14px;
 		}
 		
 		&__answer-faq {
@@ -1444,8 +1492,46 @@ body {
 			font-size: 13px;
 		}
 
-		
+		&__svg-bottom-section {
+			vertical-align: bottom;
+		}
+
+		&__info-text {
+			margin: 60px 0;
+			font-family: 'fira sans-italic';
+			font-weight: italic;
+			text-align: center;
+			padding: 0 14px;
+		}
 	}
+
+	.contact {
+		scroll-margin-top: 75px;
+
+		&__title-center {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-bottom: 50px;
+		}
+		
+		&__svg-bottom-section {
+			vertical-align: bottom;
+		}
+
+		&__container {
+			display: block;
+		}
+	}
+
+
+}
+
+.footer {
+	height: 200px;
+	background-color: #5d5d5d;
+
+
 }
 
 @import './small';
