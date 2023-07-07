@@ -302,4 +302,13 @@
             width: 68%;
         }
     }
+
+    .contact {
+        &__box-map-container {
+            display: flex;
+            justify-content: center;
+			width: 100%;
+		}
+    }
+
 }
