@@ -28,6 +28,7 @@ const accordionAll = document.querySelectorAll('.aboutme__accordion')
 const arrowOfferClick = document.querySelector('.offer__indications-items-border-bottom-two-arrow')
 const offerIndicationInfo = document.querySelector('.offer__indications-who')
 const FaqAll = document.querySelectorAll('.faq__faq-box')
+const footerYear = document.querySelector('.footer-year')
 
 
 
@@ -226,6 +227,15 @@ const showFaqInfo = (e) => {
 }
 
 FaqAll.forEach(listen => listen.addEventListener('click', showFaqInfo))
+
+
+// Footer year
+const handleCurrentYear = () => {
+    const year = (new Date).getFullYear();
+    footerYear.innerText = year;
+}
+handleCurrentYear();
+
 
 
 /* SECTION "OPINION" SLIDER: */ 

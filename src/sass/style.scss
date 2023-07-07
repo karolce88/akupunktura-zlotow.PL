@@ -67,8 +67,6 @@ body {
 	animation: resizeDesktopLogoRevv 0.8s linear forwards;
 }
 
-
-
 .nav {
 	position: fixed;
 	width: 100%;
@@ -496,7 +494,6 @@ body {
 		}
 	}
 
-
 	.aboutme {
 		scroll-margin-top: -70px;
 		display: flex;
@@ -665,13 +662,12 @@ body {
 		&__download-link {
 			text-decoration: none;
 			color: $black-text;
-			transition: all .3s;
+			transition: all 0.3s;
 
 			&:hover {
 				color: $main-pink;
 			}
 		}
-
 
 		.show-panel {
 			animation: showEducationList 0.3s ease-in forwards;
@@ -1395,11 +1391,11 @@ body {
 			align-items: center;
 			overflow: hidden;
 			border: 1px solid $little-gray;
-			transition: all .3s;
+			transition: all 0.3s;
 			box-shadow: 2px 3px 6px $little-gray;
-			
+
 			&:hover {
-				border: 1px solid $black-text;
+				border: 1px solid $black-text-brighter;
 				box-shadow: 3px 5px 10px $little-gray-darker;
 				scale: 1.01;
 			}
@@ -1600,30 +1596,25 @@ body {
 			flex-direction: column;
 			align-items: center;
 			justify-content: space-around;
-			transition: all .3s;
+			transition: all 0.3s;
 			cursor: pointer;
-
 			box-shadow: 2px 3px 6px $little-gray;
-			
+
 			&:hover {
-				border: 1px solid $black-text;
+				border: 1px solid $black-text-brighter;
 				box-shadow: 3px 5px 10px $little-gray-darker;
 				scale: 1.01;
 			}
 		}
 
 		&__box-map {
-			width: 270px;
-			height: 270px;
-			margin: 50px 15px;
+			margin-top: 80px;
 			border-radius: 8px;
 		}
 
-
-
 		&__box-icon {
 			position: absolute;
-			left:50%;
+			left: 50%;
 			top: 50%;
 			transform: translate(-50%, -150%);
 			width: 120px;
@@ -1650,8 +1641,122 @@ body {
 }
 
 .footer {
-	height: 200px;
-	background-color: #5d5d5d;
+	background-color: $footer-bg;
+	color: $bg-white;
+
+	&__container {
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+	}
+
+	&__box-offer {
+		display: none;
+	}
+
+	&__box {
+		margin: 35px 25px;
+	}
+
+	&__boxes {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	&__box-company-logo {
+		border-radius: 8px;
+		margin-bottom: 10px;
+	}
+
+	&__box-company-text1 {
+		display: flex;
+		flex-direction: column;
+		font-size: 20px;
+
+		& span {
+			margin: 2px 0;
+		}
+	}
+
+	&__box-company-text2 {
+		color: $bg-white;
+		font-size: 13px;
+		margin-top: 16px;
+	}
+
+	&__box-text1 {
+		font-size: 20px;
+		margin-bottom: 25px;
+	}
+
+	&__box-text2 {
+		font-size: 13px;
+		margin-top: 16px;
+	}
+
+	&__links {
+		text-decoration: none;
+		color: $bg-white;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		transition: all 0.2s;
+
+		&:hover {
+			color: $main-pink;
+		}
+	}
+
+	&__box-social-media-icon {
+		margin-right: 5px;
+	}
+
+	&__created-by {
+		background-color: $black-text;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		font-size: 15px;
+		margin-top: 30px;
+		padding: 3px 0;
+	}
+
+	&__company-name {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin: 4px 0;
+	}
+
+	&__company-name-small {
+		margin-top: 3px;
+		font-size: 12px;
+	}
+
+	&__line {
+		width: 40px;
+		height: 1px;
+		background-color: $bg-white;
+		margin: 3px 0;
+	}
+
+	&__project {
+		font-size: 12px;
+		margin: 4px 0;
+	}
+
+	&__project-link {
+		text-decoration: none;
+		color: $bg-white;
+		margin-left: 8px;
+
+		transition: all 0.2s;
+
+		&:hover {
+			color: $main-pink;
+		}
+	}
 }
 
 @import './small';

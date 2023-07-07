@@ -311,4 +311,15 @@
 		}
     }
 
+    .footer {
+        &__box-offer {
+            display: block;
+            margin: 35px 60px;
+        }
+
+        &__box-text2 {
+            font-size: 13px;
+            margin-top: 13px;
+        }
+    }
 }
