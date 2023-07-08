@@ -32,6 +32,9 @@
 }
 
 .main-blog {
+    
+
+
 	.h2-title-sections {
 		position: relative;
 		text-transform: uppercase;
@@ -63,6 +66,7 @@
 	}
 
 	&__box {
+        scroll-margin-top: 60px;
 		background-color: $little-white-section;
 		width: 100%;
 		margin: 15px 0;
@@ -106,10 +110,8 @@
     }
 }
 
-
 @media (min-width: 768px) {
     .main-blog {
-        
         
         &__img-mobile {
             display: none;
@@ -124,9 +126,12 @@
             margin: 0 0 20px 20px;
             border-radius: 8px;
 		}
+
+        &__box {
+            padding: 14px 30px;
+        }
 	}
 }
-
 
 @media (min-width: 992px) {
     .main-blog {
