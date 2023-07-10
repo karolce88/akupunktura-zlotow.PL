@@ -590,7 +590,7 @@ body {
 			height: auto;
 			width: 100%;
 			background-color: $bg-white;
-			padding: 35px 15px;
+			padding: 35px 15px 0px 15px;
 		}
 
 		/* faq - education offer */
@@ -1363,6 +1363,7 @@ body {
 	.opinion {
 		background-color: $bg-offer-section;
 		scroll-margin-top: -350px;
+		overflow-x: hidden;
 
 		&__svg-bottom {
 			vertical-align: bottom;
@@ -1373,11 +1374,14 @@ body {
 
 		margin-top: 60px;
 
+
 		&__container {
+			position: relative;
 			padding: 20px;
 			background-color: $little-white-section;
 			border: 1px solid $little-gray;
 			border-radius: 8px;
+			margin: 15px 0;
 		}
 		
 		&__list {
@@ -1394,7 +1398,12 @@ body {
 			}
 		}
 		
+		&__quote-icon-big {
+			position: absolute;
+			top: -12px;
+		}
 	}
+
 	.splide__pagination__page.is-active {
 		background-color: $main-pink;
 	}
