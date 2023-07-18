@@ -393,7 +393,7 @@ body {
 		border: none;
 		background-color: $CTA-green;
 		border-radius: 4px;
-		color: $bg-white;
+		color: $white-button;
 		font-family: 'fira sans-bold';
 		font-size: 14px;
 		letter-spacing: 0.5px;
@@ -420,6 +420,11 @@ body {
 		align-items: center;
 		margin-right: 15px;
 		transition: all 0.3s;
+	}
+
+	&__vertical-bar-icon {
+		width: 16px;
+		height: 16px;
 	}
 }
 
@@ -1288,7 +1293,7 @@ body {
 			border: none;
 			background-color: $CTA-green;
 			border-radius: 4px;
-			color: $bg-white;
+			color: $white-button;
 			font-family: 'fira sans-bold';
 			font-size: 14px;
 			letter-spacing: 0.5px;
@@ -1315,6 +1320,11 @@ body {
 			align-items: center;
 			margin-right: 15px;
 			transition: all 0.3s;
+		}
+
+		&__vertical-bar-icon {
+			width: 16px;
+			height: 16px;
 		}
 	}
 
