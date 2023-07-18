@@ -230,6 +230,11 @@ body {
 		transition: all 0.2s;
 	}
 
+	&__arrow-icon-mobile {
+		width: 12px;
+		height: 12px;
+	}
+
 	&__mobile-menu-container-offer-submenu {
 		position: absolute;
 		display: flex;
@@ -286,13 +291,14 @@ body {
 		align-items: center;
 		justify-content: center;
 		border: none;
-		padding: 20px 40px;
+		padding: 10px 5px;
 		font-size: 24px;
 		text-transform: uppercase;
 		font-family: fira sans-bold;
 		background-color: $bg-white;
 		cursor: pointer;
 		border-bottom: 1px solid $little-gray;
+		margin-bottom: 8%;
 
 		&:hover {
 			color: $main-pink;
@@ -303,14 +309,10 @@ body {
 		margin-right: 15px;
 	}
 
-	&__mobile-menu-container-offer-submenu {
-		display: flex;
-		flex-direction: column;
-		justify-content: space-around;
-	}
-
 	&__external-link-icon {
 		padding-left: 15px;
+		width: 12px;
+		height: 12px;
 	}
 
 	.mobile-menu-active {
@@ -328,7 +330,9 @@ body {
 	background-position: 50% 70%;
 	background-size: cover;
 	background-repeat: no-repeat;
+	width: 100vw;
 	height: 600px;
+	width: auto;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -561,9 +565,13 @@ body {
 
 		&__quote-icon-big {
 			display: none;
+			width: 24px;
+			height: 24px;
 		}
 
 		&__quote-icon {
+			width: 16px;
+			height: 16px;
 			position: absolute;
 			top: -6px;
 			left: 10px;
@@ -575,6 +583,8 @@ body {
 		}
 
 		&__my-img-small {
+			width: 250px;
+			height: 375px;
 			position: absolute;
 			max-width: 100%;
 			height: auto;
@@ -984,6 +994,8 @@ body {
 
 		&__dietetics-icon-items-img {
 			transition: all 0.3s;
+			max-width: 100px;
+			max-height: 100px;
 		}
 
 		&__dietetics-icon-items {
@@ -1040,6 +1052,13 @@ body {
 			border: 1px solid $little-gray;
 		}
 
+		&__hippocrates-img-item {
+			width: 150px;
+			height: 187px;
+			width: 100%;
+			height: auto;
+		}
+
 		&__hippocrates-text-hippocrates {
 			margin: 15px 80px 0 0;
 		}
@@ -1056,6 +1075,8 @@ body {
 
 		&__herbal-medicine-img {
 			margin-top: 40px;
+			width: 400px;
+			height: 600px;
 			height: auto;
 			width: 100%;
 			min-width: 240px;
@@ -1087,6 +1108,8 @@ body {
 		}
 
 		&__chinese-medicine-img {
+			width: 469px;
+			height: 426px;
 			margin-top: 40px;
 			height: auto;
 			width: 100%;
@@ -1124,6 +1147,8 @@ body {
 
 		&__massage-img {
 			margin-top: 40px;
+			width: 400px;
+			height: 600px;
 			height: auto;
 			width: 100%;
 			min-width: 240px;
@@ -1158,9 +1183,11 @@ body {
 		}
 
 		&__bubble-img {
-			margin-top: 40px;
-			height: auto;
+			width: 400px;
+			height: 600px;
 			width: 100%;
+			height: auto;
+			margin-top: 40px;
 			min-width: 240px;
 			border-radius: 30px;
 			padding: 0 8px;
@@ -1230,6 +1257,8 @@ body {
 
 		&__trainings-img {
 			margin-top: 40px;
+			width: 400px;
+			height: 600px;
 			height: auto;
 			width: 100%;
 			min-width: 240px;
@@ -1371,16 +1400,19 @@ body {
 	}
 
 	.splide {
+		position: relative;
 		margin: 60px 0 60px 0;
 
-
 		&__container {
-			position: relative;
 			padding: 20px;
 			background-color: $little-white-section;
 			border: 1px solid $little-gray;
 			border-radius: 8px;
 			margin: 15px 0;
+			min-height: 212px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
 		}
 		
 		&__list {
@@ -1397,14 +1429,26 @@ body {
 			}
 		}
 		
+		&__text-box {
+			text-align: justify;
+			line-height: 24px;
+			margin: 0 auto;
+		}
+		
 		&__quote-icon-big {
 			position: absolute;
 			top: -12px;
+			left: 25px;
 		}
 	}
 
 	.splide__pagination__page.is-active {
 		background-color: $main-pink;
+	}
+
+	.splide__pagination {
+		position: absolute;
+		top: 110%;
 	}
 
 	.blog {
@@ -1457,6 +1501,8 @@ body {
 			position: absolute;
 			top: 0;
 			left: 0;
+			width: 400px;
+			height: 600px;
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
@@ -1628,6 +1674,16 @@ body {
 			justify-content: center;
 		}
 
+		&__box-icon {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -150%);
+			width: 120px;
+			height: 120px;
+			transition: all .2s;
+		}
+
 		&__box {
 			position: relative;
 			width: 270px;
@@ -1649,20 +1705,15 @@ body {
 				box-shadow: 3px 5px 10px $little-gray-darker;
 				scale: 1.01;
 			}
+
+			&:hover .contact__box-icon {
+				top: 47%;
+			}
 		}
 
 		&__box-map {
 			margin-top: 80px;
 			border-radius: 8px;
-		}
-
-		&__box-icon {
-			position: absolute;
-			left: 50%;
-			top: 50%;
-			transform: translate(-50%, -150%);
-			width: 120px;
-			height: 120px;
 		}
 
 		&__box-link {
@@ -1713,8 +1764,10 @@ body {
 	}
 
 	&__box-company-logo {
-		border-radius: 8px;
+		border-radius: 3px;
 		margin-bottom: 10px;
+		width: 175px;
+		height: 50px;
 	}
 
 	&__box-company-text1 {
@@ -1767,7 +1820,7 @@ body {
 		align-items: center;
 		font-size: 15px;
 		margin-top: 30px;
-		padding: 3px 0;
+		padding: 8px 0;
 	}
 
 	&__company-name {

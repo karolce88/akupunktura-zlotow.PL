@@ -190,6 +190,7 @@
 
     &__price {
         margin-top: 35px;
+		margin-bottom: 35px;
     }
 
     &__content-italic {
@@ -227,16 +228,16 @@
             top: 10%;
 		}
 
-        &__info-box {
-            width: 100%;
-            margin-top: 35px;
-            display: flex;
-            justify-content: space-around;
-        }
+        // &__info-box {
+        //     width: 100%;
+        //     margin-top: 35px;
+        //     display: flex;
+        //     justify-content: space-around;
+        // }
 
-        &__location {
-            margin-top: 0px;
-        }
+        // &__location {
+        //     margin-top: 0px;
+        // }
 
 	}
 
