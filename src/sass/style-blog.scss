@@ -108,6 +108,19 @@
     &__img-desktop {
         display: none;
     }
+
+	&__subject-two {
+		font-weight: bold;
+		font-size: 18px;
+	}
+
+	&__text-ul {
+		margin: 0 0 20px 20px;
+	}
+
+	&__text-important {
+		font-weight: bold;
+	}
 }
 
 @media (min-width: 768px) {

@@ -198,8 +198,9 @@ body {
 		overflow: hidden;
 		color: $black-text;
 		outline: none;
+		cursor: pointer;
 
-		&:hover {
+		&:hover .nav__mobile-menu-link {
 			color: $main-pink;
 		}
 
@@ -222,7 +223,9 @@ body {
 
 	&__mobile-menu-link {
 		text-decoration: none;
+		color: $black-text;
 		outline: none;
+		
 	}
 
 	&__arrow-icon {
@@ -264,8 +267,9 @@ body {
 		overflow: hidden;
 		color: $black-text;
 		outline: none;
+		cursor: pointer;
 
-		&:hover {
+		&:hover .nav__mobile-menu-link {
 			color: $main-pink;
 		}
 
@@ -311,8 +315,8 @@ body {
 
 	&__external-link-icon {
 		padding-left: 15px;
-		width: 12px;
-		height: 12px;
+		// width: 12px;
+		// height: 12px;
 	}
 
 	.mobile-menu-active {
@@ -500,6 +504,60 @@ body {
 			background-image: url(../../dist/img/rectangle3-small.jpg);
 			background-position: 50% 50%;
 			display: none;
+		}
+	}
+
+	.cookies {
+
+		.hide-cookies {
+			display: none;
+		}
+		
+		&__cookie-box {
+			position: fixed;
+			bottom: 0;
+			height: 30%;
+			width: 100%;
+			text-align: center;
+			background-color: $footer-bg;
+			opacity: 0;
+			transform: translateY(100%);
+			z-index: 50;
+			animation: show-cookies 1s 0.5s forwards;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+
+		&__cookie-text {
+			font-size: 16px;
+			color: $white-button;
+			margin: 0 14px;
+		}
+		
+		&__cookie-btn {
+			margin-top: 14px;
+			padding: 0.5em 1em;
+			font-size: 16px;
+			border: 1px solid transparent;
+			border-radius: 4px;
+			color: $bg-white;
+			background-color: $black-text;
+			transition: background-color .4s;
+			cursor: pointer;
+
+			&:hover {
+				background-color: $black-text;
+				border: 1px solid $bg-white;
+			}
+		}
+		
+		@keyframes show-cookies {
+			to {
+				opacity: 1;
+				transform: translateY(0);
+			}
 		}
 	}
 
@@ -999,6 +1057,8 @@ body {
 
 		&__dietetics-icon-items-img {
 			transition: all 0.3s;
+			width: 100px;
+			height: 100px;
 			max-width: 100px;
 			max-height: 100px;
 		}
@@ -1308,7 +1368,7 @@ body {
 		}
 
 		&__button-text {
-			margin-left: 24px;
+			padding-left: 24px;
 		}
 
 		&__vertical-bar {
@@ -1401,7 +1461,7 @@ body {
 
 	.opinion {
 		background-color: $bg-offer-section;
-		scroll-margin-top: -350px;
+		scroll-margin-top: -10px;
 		overflow-x: hidden;
 
 		&__svg-bottom {
@@ -1479,7 +1539,7 @@ body {
 		}
 
 		&__box {
-			width: 270px;
+			max-width: 280px;
 			height: 400px;
 			background-color: $little-white-section;
 			margin: 15px;
@@ -1497,14 +1557,27 @@ body {
 				box-shadow: 3px 5px 10px $little-gray-darker;
 				scale: 1.01;
 			}
+
+			&:hover .blog__box-img-shadow {
+				background-color: transparent;
+			}
 		}
 
 		&__box-img {
-			min-width: 245px;
+			position: relative;
+			min-width: 250px;
 			min-height: 190px;
 			margin: 10px;
 			border-radius: 8px;
-			position: relative;
+		}
+
+		&__box-img-shadow {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(208, 208, 208, 0.4);
+			border-radius: 8px;
+			transition: all 0.3s;
 		}
 
 		&__box-img-item {
@@ -1517,19 +1590,23 @@ body {
 			height: 100%;
 			object-fit: cover;
 			object-position: top;
+			border-radius: 8px;
 		}
 
 		&__box-text {
 			width: 90%;
 			height: 40%;
 			margin: 10px;
-			text-align: justify;
 			font-size: 13px;
 			line-height: 19px;
 		}
 
 		&__box-text-title {
 			margin-bottom: 10px;
+		}
+
+		&__box-text-content {
+			text-align: justify;
 		}
 
 		&__box-read-more {
@@ -1558,7 +1635,7 @@ body {
 	}
 
 	.faq {
-		scroll-margin-top: -350px;
+		scroll-margin-top: -10px;
 		background-color: $bg-offer-section;
 
 		.show-panel-faq {
@@ -1794,6 +1871,17 @@ body {
 		color: $bg-white;
 		font-size: 13px;
 		margin-top: 16px;
+	}
+
+	&__box-company-text3 {
+		color: $bg-white;
+		font-size: 13px;
+		margin-top: 16px;
+		display: inline-block;
+		width: 192px;
+		color: $little-gray;
+		font-family: 'fira sans-italic';
+		font-weight: italic;
 	}
 
 	&__box-text1 {

@@ -28,6 +28,13 @@
 			}
 		}
 
+		.cookies {
+			
+			&__cookie-box {
+				height: 15%;
+			}
+		}
+
 		.aboutme {
 			position: relative;
 			scroll-margin-top: -60px;
@@ -65,6 +72,8 @@
 		}
 
 		.faq {
+			// scroll-margin-top: -500px;
+
 			&__question-faq {
 				font-size: 14px;
 			}

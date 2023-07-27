@@ -17,14 +17,30 @@
 		&__nav-item {
 			position: relative;
 			display: inline-block;
+			text-decoration: none;
 			text-transform: uppercase;
 			font-size: 16px;
-			padding: 16px 13px;
 			margin: 0 6px;
 			text-decoration: none;
 			color: $black-text;
 			border-radius: 2px;
 			overflow: hidden;
+			transition: all 0.4s;
+		}
+
+		&__desktop-menu-items {
+			display: inline-block;
+			text-decoration: none;
+			text-transform: uppercase;
+			font-size: 16px;
+			// margin: 0 6px;
+			text-decoration: none;
+			color: $black-text;
+			border-radius: 2px;
+			// overflow: hidden;
+			padding: 16px 13px;
+			width: 100%;
+			height: 100%;
 			transition: all 0.4s;
 
 			&:hover {
@@ -79,11 +95,15 @@
 		}
 
 		&__email-icon {
-			padding-right: 8px;
+			margin-right: 8px;
+			width: 16px;
+			height: 16px;
 		}
 
 		&__phone-icon {
-			padding-right: 8px;
+			margin-right: 8px;
+			width: 16px;
+			height: 16px;
 		}
 
 		&__media-bar-text {
@@ -144,6 +164,7 @@
 			position: absolute;
 			box-shadow: 0 2px 8px -2px $black-text;
 			border-radius: 6px;
+			top: 48px;
 			left: 103px;
 			padding: 20px;
 			background-color: $bg-white;
@@ -155,15 +176,25 @@
 		}
 
 		&__dropdown-menu-li {
-			padding: 16px 15px;
 			text-transform: uppercase;
 			position: relative;
 			text-decoration: none;
 			color: $black-text;
 			border-radius: 2px;
 			overflow: hidden;
-			transition: all 0.4s;
+			transition: all 0.3s;
+			text-decoration: none;
+		}
 
+		&__dropdown-menu-offer-items {
+			display: inline-block;
+			text-decoration: none;
+			color: $black-text;
+			cursor: pointer;
+			transition: all 0.3s;
+			padding: 10px 15px;
+			margin: 3px 0;
+			
 			&:hover {
 				color: $main-pink;
 			}
@@ -176,17 +207,14 @@
 				background-color: $main-pink;
 				bottom: 0px;
 				left: -40%;
-				transition: all 0.4s;
+				transition: all 0.3s;
 				border-radius: 3px;
 			}
 
 			&:hover::before {
 				left: 0px;
 			}
-		}
 
-		&__dropdown-menu-offer-items {
-			text-decoration: none;
 		}
 
 		&__mobile-menu-container {
@@ -210,6 +238,13 @@
 			}
 			&__circle-three {
 				transform: translate(-240%, 0%);
+			}
+		}
+
+		.cookies {
+			
+			&__cookie-box {
+				height: 10%;
 			}
 		}
 
@@ -296,14 +331,20 @@
 				font-size: 15px;
 			}
 		}
+
+		.opinion {
+			scroll-margin-top: -330px;
+		}
+
+		.faq {
+			scroll-margin-top: -350px;
+	
+			&__container {
+				width: 68%;
+			}
+		}
 	}
 
-    .faq {
-
-        &__container {
-            width: 68%;
-        }
-    }
 
     .contact {
         &__box-map-container {

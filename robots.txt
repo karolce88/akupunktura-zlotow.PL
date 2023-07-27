@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Disallow: /html
+Disallow: /.git
+Disallow: /html
+Disallow: /dist/download
+Disallow: /package.json
+Disallow: /package-lock.json
+
+Sitemap: /sitemap.xml

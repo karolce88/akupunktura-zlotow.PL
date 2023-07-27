@@ -49,6 +49,13 @@
 			}
 		}
 
+		.cookies {
+			
+			&__cookie-box {
+				height: 12%;
+			}
+		}
+
 		.aboutme {
 			scroll-margin-top: -120px;
 
@@ -232,6 +239,9 @@
 		}
 
         .faq {
+			scroll-margin-top: -100px;
+
+
 			&__question-faq {
 				font-size: 15px;
 			}

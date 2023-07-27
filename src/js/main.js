@@ -1,4 +1,4 @@
-const offerBtnDesktop = document.querySelector('.offer-desktop-item')
+const offerBtnDesktop = document.querySelector('.offer-show-list')
 const offerBtnDesktopChangeColor = document.querySelector('.offer-color')
 const dropdownDesktopItem = document.querySelector('.desktop-offer-menu')
 const arrowIconDesktopMenu = document.querySelector('.nav__arrow-icon')
@@ -29,6 +29,8 @@ const arrowOfferClick = document.querySelector('.offer__indications-items-border
 const offerIndicationInfo = document.querySelector('.offer__indications-who')
 const FaqAll = document.querySelectorAll('.faq__faq-box')
 const footerYear = document.querySelector('.footer-year')
+const cookieBox = document.querySelector('.cookies__cookie-box')
+const cookieBtn = document.querySelector('.cookies__cookie-btn')
 
 
 
@@ -105,11 +107,13 @@ const closeMobileMenuByClickElements = () => {
     const mobileMenuLinks3 = document.querySelector('.mobile-nav-links3')
     const mobileMenuLinks4 = document.querySelector('.mobile-nav-links4')
     const mobileMenuLinks5 = document.querySelector('.mobile-nav-links5')
+    const mobileMenuLinks6 = document.querySelector('.mobile-nav-links6')
     mobileMenuLinks1.addEventListener('click', showMobileMenu)
     mobileMenuLinks2.addEventListener('click', showMobileMenu)
     mobileMenuLinks3.addEventListener('click', showMobileMenu)
     mobileMenuLinks4.addEventListener('click', showMobileMenu)
     mobileMenuLinks5.addEventListener('click', showMobileMenu)
+    mobileMenuLinks6.addEventListener('click', showMobileMenu)
 }
 
 const closeSubmenuOffer = () => {
@@ -229,12 +233,32 @@ const showFaqInfo = (e) => {
 FaqAll.forEach(listen => listen.addEventListener('click', showFaqInfo))
 
 
-// Footer year
+// Footer - year
 const handleCurrentYear = () => {
     const year = (new Date).getFullYear();
     footerYear.innerText = year;
 }
 handleCurrentYear();
+
+
+// HANDLE COOKIES:
+
+const showCookie = () => {
+	const cookieEaten = localStorage.getItem('cookie')
+	
+	if (cookieEaten) {
+		cookieBox.classList.add('hide-cookies')
+	}
+}
+
+const handleCookieBox = () => {
+	localStorage.setItem('cookie', 'true')
+	cookieBox.classList.add('hide-cookies')
+}
+
+cookieBtn.addEventListener('click', handleCookieBox)
+showCookie()
+
 
 
 

@@ -199,6 +199,10 @@
         display: flex;
         flex-direction: column;
     }
+
+	&__img-box {
+		display: none;
+	}
 }
 
 @media (min-width: 992px) {
@@ -221,13 +225,28 @@
 
 		&__img {
             display: block;
-			width: 100%;
-            height: 100%;
+			width: 50%;
+            height: 50%;
 			height: auto;
-            position: sticky;
             top: 10%;
 		}
 
+		&__img-box {
+			display: block;
+            position: sticky;
+			top: 3%;
+			height: 100%;
+			width: 100%;
+			padding-top: 60px;
+		}
+
+		&__fb-desktop {
+			margin: -15px 0 0 15px;
+		}
+
+		&__img-box-mobile {
+			display: none;
+		}
         // &__info-box {
         //     width: 100%;
         //     margin-top: 35px;
